@@ -1,17 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameVerse</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Styles/index.css">
 </head>
+
 <body>
     <header></header>
-    <main>++++</main>
+    <main>
+
+        <div class="container">
+            <div class="row mt-5">
+                <h1>Todos los juegos</h1>
+                <div id="carouselGames" class="carousel slide pt-2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/American-Truck-Simulator.jpg" class=" img d-inline-flex w-100" alt="American Truck Simulator">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/UNO.jpg" class="img d-inline-flex w-100" alt="UNO">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/Silent-Hill-2.jpg" class="img d-inline-flex w-100" alt="Silent Hill 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/WWE-2K23.jpg" class="img d-inline-flex w-100" alt="WWE 2K23">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Need-for-Speed-Heat.jpg" class="img d-inline-flex w-100" alt="Need for Speed Heat">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/apex/apex22.jpg" class="img d-inline-flex w-100" alt="Apex Legends">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/escape-the-backrooms.jpg" class="img d-inline-flex w-100" alt="Escape the Backrooms">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/Counter-strike.png" class="img d-inline-flex w-100" alt="Counter-strike:Global Offensive">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Forza-Horizon-5.jpg" class="img d-inline-flex w-100" alt="Forza Horizon 5">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/gang-beasts.jpg" class="img d-inline-flex w-100" alt="Gang Beasts">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/F1-Manager-2023.jpg" class="img d-inline-flex w-100" alt="F1 Manager 2023">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/pubg.jpg" class="img d-inline-flex w-100" alt="PUBG">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/Fallout-76-4k-Desktop-Wallpapers.png" class="img d-inline-flex w-100" alt="Fallout 76">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/CitiesSkylines_ColossalOrder_S3-2560x1440-14df106873c918591e49bd9604841e83.jpg" class="img d-inline-flex w-100" alt="Cities Skylines">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/hunt-horrors-of-gilded-age_1920x1080_xtrafondos.com.jpg" class="img d-inline-flex w-100" alt="HUNT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/fifa2023.jpg" class="img d-inline-flex w-100" alt="FIFA 2023">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/valorant.jpg" class="img d-inline-flex w-100" alt="Valortant">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/Leftr-4-Dead-2.jpg" class="img d-inline-flex w-100" alt="Left 4 Dead 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/fortnite-hd-wallpaper-preview.jpg" class="img d-inline-flex w-100" alt="Fornite">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/fall-guys.jpg" class="img d-inline-flex w-100" alt="Fall Guys">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/PGA-TOUR-2K23.jpg" class="img d-inline-flex w-100" alt="PGA TOUR 2K23">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/outlast.jpg" class="img d-inline-flex w-100" alt="Outlast">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/house-fliper.jpg" class="img d-inline-flex w-100" alt="House Flipper">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/NBA 2K23.jpg" class="img d-inline-flex w-100" alt="NBA 2K23">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/team-fortress-2-button-1643168687556.jpg" class="img d-inline-flex w-100" alt="Team Fortress 2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Golf-With-Your-Friends.jpg" class="img d-inline-flex w-100" alt="Golf With Your Friends">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/proyect-zomboide.jpg" class="img d-inline-flex w-100" alt="Proyect Zomboid">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/crysis-3-remastered-2021101610215337_1.jpg" class="img d-inline-flex w-100" alt="Crysis 3">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/Only-Up-Free-Download.png" class="img d-inline-flex w-100" alt="Only Up">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/remnant.jpg" class="img d-inline-flex w-100" alt="Remnant">
+                                </div>
+                            </div>
+                        </div><div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/plants-vs-zombies.jpg" class="img d-inline-flex w-100"  alt="Plant vs Zombies">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/power-wash.jpg" class="img d-inline-flex w-100" alt="Power Wash">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/GTAV.jpg" class="img d-inline-flex w-100" alt="Grand Theft Auto V">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Automobilista-2.jpg" class="img d-inline-flex w-100" alt="Automobilista 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/remnant2.jpg" class="img d-inline-flex w-100" alt="Remnant 2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/SlimeRancher.jpg" class="img d-inline-flex w-100" alt="Slime Rancher">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Riders-Republic.jpg" class="img d-inline-flex w-100" alt="Riders Republic">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/COD-BlackOpsIII.jpg" class="img d-inline-flex w-100" alt="Call of Duty - Black Ops III">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/resident-evil-2.jpg" class="img d-inline-flex w-100" alt="Resident Evil 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/the-sims4.jpeg" class="img d-inline-flex w-100" alt="The Sims 4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselGames" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon botones-carousel bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next boton-der" type="button" data-bs-target="#carouselGames" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <div class="row mt-5">
+                <h1>Shooters</h1>
+                <div id="carouselShooter" class="carousel slide pt-2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/Counter-strike.png" class="img d-inline-flex w-100" alt="Counter-strike:Global Offensive">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/apex/apex22.jpg" class="img d-inline-flex w-100" alt="Apex Legends">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/pubg.jpg" class="img d-inline-flex w-100" alt="PUBG">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/valorant.jpg" class="img d-inline-flex w-100" alt="Valortant">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/fortnite-hd-wallpaper-preview.jpg" class="img d-inline-flex w-100" alt="Fornite">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/hitman-2-4k-wallpaper-preview.jpg" class="img d-inline-flex w-100" alt="Hitman 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/team-fortress-2-button-1643168687556.jpg" class="img d-inline-flex w-100" alt="Team Fortress 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/crysis-3-remastered-2021101610215337_1.jpg" class="img d-inline-flex w-100" alt="Crysis 3">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/GTAV.jpg" class="img d-inline-flex w-100" alt="Grand Theft Auto V">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/COD-BlackOpsIII.jpg" class="img d-inline-flex w-100" alt="Call of Duty - Black Ops III">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/rainbow-siege.jpg" class="img d-inline-flex w-100" alt="Tom Clancy's Rainbow Six Siege">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/Battlefield-2042.jpg" class="img d-inline-flex w-100" alt="Battlefield 2042">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/arma3.jpg" class="img d-inline-flex w-100" alt="Arma III">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/DOOM-Eternal.jpg" class="img d-inline-flex w-100" alt="DOOM Eternal">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/shooter/Battlefield-V.jpg" class="img d-inline-flex w-100" alt="Battlefield V">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselShooter" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon botones-carousel bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselShooter" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+
+
+            <div class="row mt-5 ">
+                <h1>Casuales</h1>
+                <div id="carouselCasual" class="carousel slide pt-2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/among-us-game-wallpaper-in-full-hd-img1.png" class="img d-inline-flex w-100" alt="Among Us">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/escape-simulator.jpg" class="img d-inline-flex w-100" alt="Escape Simulator">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/CitiesSkylines_ColossalOrder_S3-2560x1440-14df106873c918591e49bd9604841e83.jpg" class="img d-inline-flex w-100" alt="Cities Skylines">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/fall-guys.jpg" class="img d-inline-flex w-100" alt="Fall Guys">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/house-fliper.jpg" class="img d-inline-flex w-100" alt="House Flipper">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/Only-Up-Free-Download.png" class="img d-inline-flex w-100" alt="Only Up">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/plants-vs-zombies.jpg" class="img d-inline-flex w-100"  alt="Plant vs Zombies">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/power-wash.jpg" class="img d-inline-flex w-100" alt="Power Wash">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/SlimeRancher.jpg" class="img d-inline-flex w-100" alt="Slime Rancher">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/the-sims4.jpeg" class="img d-inline-flex w-100" alt="The Sims 4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/vrchat-logo-poster-dxxcaljtm1x5c92l.jpg" class="img d-inline-flex w-100" alt="VR Chat">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/worms.png" class="img d-inline-flex w-100" alt="Worms Battlegrounds">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/gang-beasts.jpg" class="img d-inline-flex w-100" alt="Gang Beasts">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/UNO.jpg" class="img d-inline-flex w-100" alt="UNO">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/casuals/American-Truck-Simulator.jpg" class=" img d-inline-flex w-100" alt="American Truck Simulator">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselCasual" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselCasual" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="row mt-5 ">
+                <h1>Terror</h1>
+                <div id="carouselTerror" class="carousel slide pt-2">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div class="div-img">
+                                    <img height="150" width="250" src="./Assets/img/terror/DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7.jpg" class="img d-inline-flex w-100" alt="Dead by Daylight">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/escape-the-backrooms.jpg" class="img d-inline-flex w-100" alt="Escape the Backrooms">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/Fallout-76-4k-Desktop-Wallpapers.png" class="img d-inline-flex w-100" alt="Fallout 76">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/hunt-horrors-of-gilded-age_1920x1080_xtrafondos.com.jpg" class="img d-inline-flex w-100" alt="HUNT">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/Leftr-4-Dead-2.jpg" class="img d-inline-flex w-100" alt="Left 4 Dead 2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/outlast.jpg" class="img d-inline-flex w-100" alt="Outlast">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/proyect-zomboide.jpg" class="img d-inline-flex w-100" alt="Proyect Zomboid">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/remnant.jpg" class="img d-inline-flex w-100" alt="Remnant">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/remnant2.jpg" class="img d-inline-flex w-100" alt="Remnant 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/resident-evil-2.jpg" class="img d-inline-flex w-100" alt="Resident Evil 2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/resident-evil-4.jpg" class="img d-inline-flex w-100" alt="Resident Evil 4">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/Silent-Hill-2.jpg" class="img d-inline-flex w-100" alt="Silent Hill 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/sons-of-the-forest.jpeg" class="img d-inline-flex w-100" alt="Sons of the Forest">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/The-Forest.jpg" class="img d-inline-flex w-100" alt="The Forest">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/terror/wp7775348-phasmophobia-wallpapers.jpg" class="img d-inline-flex w-100" alt="Phasmophobia">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselTerror" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselTerror" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row mt-5 ">
+                <h1>Deportes y Carreras</h1>
+                <div id="carouselSports" class="carousel slide pt-2 mb-5">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div >
+                                    <img height="150" width="250" src="./Assets/img/sports/fifa2023.jpg" class="img d-inline-flex w-100" alt="FIFA 2023">
+                                </div>
+                                <div >
+                                    <img height="150" width="250" src="./Assets/img/sports/NBA 2K23.jpg" class="img d-inline-flex w-100" alt="NBA 2K23">
+                                </div>
+                                <div >
+                                    <img height="150" width="250" src="./Assets/img/sports/Forza-Horizon-5.jpg" class="img d-inline-flex w-100" alt="Forza Horizon 5">
+                                </div>
+                                <div >
+                                    <img height="150" width="250" src="./Assets/img/sports/F1-Manager-2023.jpg" class="img d-inline-flex w-100" alt="F1 Manager 2023">
+                                </div>
+                                <div >
+                                    <img height="150" width="250" src="./Assets/img/sports/WWE-2K23.jpg" class="img d-inline-flex w-100" alt="WWE 2K23">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/PGA-TOUR-2K23.jpg" class="img d-inline-flex w-100" alt="PGA TOUR 2K23">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Football-Manager-2023.jpg" class="img d-inline-flex w-100" alt="Football Manager 2023">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Golf-With-Your-Friends.jpg" class="img d-inline-flex w-100" alt="Golf With Your Friends">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Automobilista-2.jpg" class="img d-inline-flex w-100" alt="Automobilista 2">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Riders-Republic.jpg" class="img d-inline-flex w-100" alt="Riders Republic">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Pro-Cycling-Manager-2023.jpg" class="img d-inline-flex w-100" alt="Pro Cycling Manager 2023">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Liftoff-FPV-Drone-Racing.jpg" class="img d-inline-flex w-100" alt="Liftoff: FPV Drone Racing">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Need-for-Speed-Heat.jpg" class="img d-inline-flex w-100" alt="Need for Speed Heat">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/Super-Mega-Baseball-4.jpg" class="img d-inline-flex w-100" alt="Super Mega Baseball 4">
+                                </div>
+                                <div>
+                                    <img height="150" width="250" src="./Assets/img/sports/MotoGP-23.jpg" class="img d-inline-flex w-100" alt="MotoGP 23">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselSports" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselSports" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
     <footer></footer>
     <script src="./app/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
