@@ -24,9 +24,9 @@ const registerNone = document.getElementById('registerNoneJS');
 const accountNone = document.getElementById('accountNone');
 const adminMobile = document.getElementById('adminNone');
 const test = document.getElementsByClassName('test');
-console.log(test)
-userAdmin.style.display = 'none';
-adminMobile.style.display = 'none';
+// console.log(test)
+// userAdmin.style.display = 'none';
+// adminMobile.style.display = 'none';
 
 
 const log = () => {
