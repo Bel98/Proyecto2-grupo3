@@ -1,6 +1,8 @@
 const newFila = document.getElementById('fila');
 const editFila = document.getElementById('filaEdit');
 const save = document.getElementById('save');
+const edition = document.getElementById('edition');
+edition.style.display = 'none';
 save.style.display = 'none';
 newFila.style.display = 'none';
 editFila.style.display = 'none';
@@ -14,6 +16,10 @@ const addGame = () => {
     save.style.display = 'block';
 }
 
+const editionIN = () => {
+    editFila.style.display = 'table-row';
+    edition.style.display = 'block';
+}
 
 
 const saveGame = () => {
@@ -64,7 +70,7 @@ const saveGame = () => {
     
     
 
-
+  
 
     saveDataToLocalStorage(gamer);
 
@@ -75,6 +81,15 @@ const saveGame = () => {
     newFila.style.display = 'none';   
     save.style.display = 'none'; 
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -182,7 +197,10 @@ const saveGame = () => {
         const editButton = document.createElement('button');
         editButton.classList.add('d-flex', 'justify-content-center', 'btn', 'btn-primary');
         editButton.innerHTML = '<i class="bi bi-pencil-square"></i>';
-        editButton.addEventListener('click', () => editGame(game.gameCode)); // Llama a la función para editar
+        // editButton.addEventListener('click', () => editGame(game.gameCode)); // Llama a la función para editar
+        // editButton.addEventListener('click', () => editionIN());
+        editButton.addEventListener('click', () => editGame(gameCode));
+
 
         const starButton = document.createElement('button');
         starButton.classList.add('d-flex', 'justify-content-center', 'btn', 'btn-primary');
@@ -222,45 +240,29 @@ function deleteGame(gameCode) {
 
 
 
-function editGame(gameCode) {
-    // Encuentra el juego con el código correspondiente en el array storageGames
+
+
+const editGame = (gameCode) => {
     const gameToEdit = storageGames.find(game => game.gameCode === gameCode);
 
-    console.log(gameToEdit);
-    editFila.style.display = 'table-row';
+    if (!gameToEdit) {
+        console.log(`No se encontró ningún juego con el código ${gameCode}`);
+        return;
+    }
 
-    gameToEdit.gameName = document.getElementById('nameGEdit');
-    gameToEdit.gameCat = document.getElementById('categoryEdit');
-    gameToEdit.gameDesc = document.getElementById('decriptionEdit');
-    /* Teniendo en cuenta que ya tenemos localizado el objeto ahora deberiamos encontrar la manera de editar esos valores:
-    para ello podriamos probar lo siguiente:
-    1- crear otra funcion de input 
-    2- Tomar esos valores y guardarlos en otro objeto
-    3- En el cual luego iterara y reemplazara los valores del objeto a editar
-    4- subir al localStorage
-    (propuestas, mantener el codigo en la edicion) 
+    // Llena el formulario de edición con los detalles del juego
+    document.getElementById('codigoEdit').value = gameToEdit.gameCode;
+    document.getElementById('nameGEdit').value = gameToEdit.gameName;
+    document.getElementById('categoryEdit').value = gameToEdit.gameCat;
+    document.getElementById('decriptionEdit').value = gameToEdit.gameDesc;
+    document.getElementById('checkOutEdit').checked = gameToEdit.gameCheck;
+
     
-    
-    
-    Opcion 2:  
-        1- llamar a la funcion addGames*/
-
-    console.log(gameToEdit);
-
-
-
-
-    // Llena el formulario con los detalles del juego a editar
-    document.getElementById('codigo').value = gameToEdit.gameCode;
-    document.getElementById('nameG').value = gameToEdit.gameName;
-    document.getElementById('category').value = gameToEdit.gameCat;
-    document.getElementById('decription').value = gameToEdit.gameDesc;
-    document.getElementById('checkOut').checked = gameToEdit.gameCheck;
-
-    // Ahora el formulario está lleno con los detalles del juego a editar
-    // Puedes habilitar el botón "Guardar" aquí si lo deshabilitaste previamente
-    save.style.display = 'block';
+    editionIN();
 }
+
+
+
 
 
 
