@@ -14,7 +14,7 @@
         <nav class="navbar fixed-top mb-5" id="navbar">
             <div class="container-fluid">
               <img src="./Assets/logo.png" id="logoNav" alt="logo">
-              <div class="d-none d-md-block d-flex">
+              <div class="d-none d-md-block d-flex" alt="NavBar">
                 <div class="d-flex flex-row mb-3" id="admin">
 
                   <div class="p-2">
@@ -28,8 +28,7 @@
                       <a class="navbar-brand" href="#">
                         <span>Login</span>
                       </a>
-                    </button>
-                    
+                    </button>                    
                   </div>
 
                   <div class="p-2" id="registerNoneJS">
@@ -96,7 +95,7 @@
 
             <!--OffCanvas Mobile-->
 
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" alt="NavBar-mobile">
 
                 <!--Header-->
                 <div class="offcanvas-header bg-primary rounded-start-pill bkgDegBlue">
@@ -172,19 +171,15 @@
                   
                   <!--Account-->
 
-                  <div class="mt-auto" id="accountNone">
-
+                  <div class="mt-auto" id="accountNone" alt="cuenta-mobile">
                     <div class="d-flex flex-row w-100  border border-black justify-content-around  accountG">
-
                       <div class=" m-2"> 
                         <i class="bi bi-person"></i>
                         <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginBtn" >
                           <span>Login</span>
                         </button>
-                      </div>
-                      
+                      </div>                      
                       <div class="border-start border-black"></div>
-
                       <div>
                         <div class=" m-2"> 
                           <i class="bi bi-globe2"></i>
@@ -196,19 +191,15 @@
                     </div>
                   </div>
                   <div class="mt-auto" id="adminNone">
-
                     <div class="d-flex flex-row w-100  border border-black justify-content-around  accountG">
-
                       <div class="m-2 test"> 
                         <i class="bi bi-person"></i>
                         <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalAdmin" >
                           <span>Administracion</span>
                         </button>
-                      </div>
-                      
+                      </div>                     
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -225,7 +216,7 @@
 
           <!--Modal Login-->
 
-          <div class="modal mt-5" id="loginBtn" tabindex="-2" >
+          <div class="modal mt-5" id="loginBtn" tabindex="-2" alt="login">
             <div class="modal-dialog mt-5">
               <div class="modal-content  loginBtn accountG borderR ">
                 <div class="modal-header bkgDegBlue rounded-start-pill">
@@ -267,7 +258,7 @@
           
           <!--Modal de recucperacion de contraseña-->
 
-          <div class="modal mt-5" id="rePass" tabindex="-2" >
+          <div class="modal mt-5" id="rePass" tabindex="-2" alt="contraseña">
             <div class="modal-dialog mt-5">
               <div class="modal-content  loginBtn accountG borderR ">
                 <div class="modal-header bkgDegBlue rounded-start-pill">
@@ -294,7 +285,7 @@
 
 
           <!--Modal de Administracion-->
-          <div class="modal modal-xl" id="modalAdmin">
+          <div class="modal modal-xl" id="modalAdmin" alt="Administracion">
             <div class="modal-dialog">
               <div class="modal-content Larger shadow">
                 <div class="modal-header bkgDegBlue">
@@ -321,9 +312,7 @@
                         <th scope="col">Opciones</th>
                       </tr>
                     </thead>
-                    <tbody id="cuerpo">
-                      
-                      
+                    <tbody id="cuerpo">                
                         <tr id="fila">
                           <td><input type="number" id="codigo"></td>
                           <td><input type="text" id="nameG"></td>
