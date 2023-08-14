@@ -25,8 +25,8 @@ const accountNone = document.getElementById('accountNone');
 const adminMobile = document.getElementById('adminNone');
 const test = document.getElementsByClassName('test');
 // console.log(test)
-// userAdmin.style.display = 'none';
-// adminMobile.style.display = 'none';
+userAdmin.style.display = 'none';
+adminMobile.style.display = 'none';
 
 
 const log = () => {

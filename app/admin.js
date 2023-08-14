@@ -182,7 +182,7 @@ function addGameToTable(game) {
     
     // Código para deleteButton
     const deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-button', 'btn', 'btn-primary');
+    deleteButton.classList.add('delete-button', 'btn', 'btn-primary','btnAdmin');
     const deleteIcon = document.createElement('i');
     deleteIcon.classList.add('bi', 'bi-trash');
     deleteIcon.classList.add('icon-size');
@@ -191,7 +191,7 @@ function addGameToTable(game) {
 
     // Código para editButton
     const editButton = document.createElement('button');
-    editButton.classList.add('btn', 'btn-primary');
+    editButton.classList.add('btn', 'btn-primary','btnAdmin');
     const editIcon = document.createElement('i');
     editIcon.classList.add('bi', 'bi-pencil-square');
     editIcon.classList.add('icon-size');
@@ -200,7 +200,7 @@ function addGameToTable(game) {
 
     // Código para starButton
     const starButton = document.createElement('button');
-    starButton.classList.add('btn', 'btn-primary');
+    starButton.classList.add('btn', 'btn-primary','btnAdmin');
     const starIcon = document.createElement('i');
     starIcon.classList.add('bi', 'bi-star-fill');
     starIcon.classList.add('icon-size');
