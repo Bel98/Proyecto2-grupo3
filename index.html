@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +10,25 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="./Styles/styles.css">
 </head>
+
 <body>
   <header></header>
   <!-- Titulo -->
   <main class="colorFondo">
-    <div class="container-fluid ">
-      <div class="row justify-content-center ">
-        <h2 class="text-white text-center mt-3">Destacados y Recomendados</h2>
-      </div>
+    <div class="row justify-content-center ">
+      <h2 class="text-white text-center mt-3 d-md-none">Destacados y Recomendados</h2>
     </div>
 
+
     <!-- carrusel-->
-    <div id="myCarousel" class="carousel slide carousel-fade d-none d-md-flex margenTiutlo" data-bs-ride="carousel">
-      <div class="carousel-inner marginAbajo">
+    <div id="myCarousel" class="carousel slide carousel-fade d-none d-md-flex flex-md-column margenTiutlo"
+      data-bs-ride="carousel ">
+      <div class="container-fluid ">
+        <div class="row justify-content-center ">
+          <h2 class="text-white text-center mt-5">Destacados y Recomendados</h2>
+        </div>
+      </div>
+      <div class="carousel-inner marginAbajo tamañoImagen">
         <div class="carousel-item active"> <!-- cuerpo primera imagen-->
           <div class="container-fluid border-dark">
             <div class="d-flex justify-content-center carruselPadding border-dark">
@@ -33,12 +40,19 @@
                   </div>
                   <div class="col-md-12 col-lg-4">
                     <div class="card-body colorCard">
-                      <h5 class="card-title text-light">EA Sports FC 24</h5>
-                      <p class="card-text text-light">Precompra de la ultimate edition para disfrutar de 7 dias de
+                      <h2 class="card-title text-light tituloJuego">EA Sports FC 24</h2>
+                      <p class="card-text colorLetras h4 tamañoPalabras ">Precompra de la ultimate edition para
+                        disfrutar de 7 dias de
                         acceso anticipado. Juga con tu equipo y compite</p>
-                        <p class="text-light">Categoria: Deportes</p>
-                      <p class="card-text marginLetras d-md-none d-lg-flex"><small class="text-light h4">A partir de US$ 99</small></p>
-                      <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-8"><h5>Ver mas</h2></a>
+                      <div class="mb-md-5 mb-lg-5">
+                        <p class="colorLetras h6 marginVermas">Categoria: Deportes</p>
+                        <p class="colorLetras d-mb-none h6">Lanzamiento: 15 Dic 1993</p>
+                        <p class="colorLetras h6 mb-lg-5"> <i class="bi bi-microsoft"><i
+                              class="bi bi-apple ms-lg-1"></i></i></p>
+                      </div>
+                      <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                        <h5>Ver mas</h2>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -52,17 +66,22 @@
               <div class="card border border-dark ">
                 <div class="row g-0">
                   <div class="col-12 col-lg-8">
-                    <img src="./Assets/Imagenes carrusel seccion 1/gta-5.jpg"
-                      class="img-fluid rounded-start tamañoImagen" alt="gta,V">
+                    <img src="./Assets/Imagenes carrusel seccion 1/98.webp" class="img-fluid rounded-start tamañoImagen" alt="gta,V">
                   </div>
                   <div class="col-md-12 col-lg-4">
                     <div class="card-body colorCard">
-                      <h5 class="card-title text-light">Grand Theft Auto V</h5>
-                      <p class="card-text text-light">Explora el galardonado mundo de Los Santos y el condado de Blaine
-                        con una resolución de 4K.</p>
-                        <p class="text-light">Categoria: Mundo Abierto</p>
-                      <p class="card-text marginLetras d-md-none d-lg-flex"><small class="text-light h4">A partir de US$ 70</small></p>
-                      <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-8"><h5>Ver mas</h2></a>
+                      <h3 class="card-title text-light tituloJuego">Grand Theft Auto V</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Explora el galardonado mundo de Los Santos y
+                          el condado de Blaine
+                          con una resolución de 4K.</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Mundo Abierto</p>
+                          <p class="colorLetras h6">Lanzamiento: 13 Abr 2015</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
+                        </div>
+                        <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                          <h5>Ver mas</h2>
+                        </a>
                     </div>
                   </div>
                 </div>
@@ -81,12 +100,18 @@
                   </div>
                   <div class="col-md-12 col-lg-4">
                     <div class="card-body colorCard">
-                      <h5 class="card-title text-light">Apex Legends</h5>
-                      <p class="card-text text-light">Juego estratégico basado en pelotones y jugabilidad innovadora en
-                        la nueva evolución del Battle Royale.</p>
-                        <p class="text-light">Categoria: Shooters</p>
-                      <p class="card-text marginLetras d-md-none d-lg-flex"><small class="text-light h4">A partir de US$ 34</small></p>
-                      <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-8"><h5>Ver mas</h2></a>
+                      <h3 class="card-title text-light">Apex Legends</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Juego estratégico basado en pelotones y
+                          jugabilidad innovadora en
+                          la nueva evolución del Battle Royale.</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Shooters</p>
+                          <p class="colorLetras h6">Lanzamiento: 4 Nov 2020</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
+                        </div>
+                        <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                          <h5>Ver mas</h2>
+                        </a>
                     </div>
                   </div>
                 </div>
@@ -105,12 +130,19 @@
                   </div>
                   <div class="col-md-12 col-lg-4">
                     <div class="card-body colorCard">
-                      <h5 class="card-title text-light">Fortnite</h5>
-                      <p class="card-text text-light">Explora entornos amplios y destruibles. Forma equipo con tus
-                        amigos y esprinta, trepa y aplasta a tus rivales.</p>
-                        <p class="text-light">Categoria: Shooters</p>
-                      <p class="card-text marginLetras d-md-none d-lg-flex"><small class="text-light h4">A partir de US$ 50 </small></p>
-                      <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-8"><h5>Ver mas</h2></a>
+                      <h3 class="card-title text-light">Fortnite</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Explora entornos amplios y destruibles. Forma
+                          equipo con tus
+                          amigos y esprinta, trepa y aplasta a tus rivales.</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Shooters</p>
+                          <p class="colorLetras h6">Lanzamiento: 26 Seot 2017</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"><i
+                                class="bi bi-apple ms-lg-1"></i></i></p>
+                        </div>
+                        <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2  posicionBoton">
+                          <h5>Ver mas</h2>
+                        </a>
                     </div>
                   </div>
                 </div>
@@ -118,23 +150,28 @@
             </div>
           </div>
         </div>
-        <div class="carousel-item"> <!-- cuerpo quinta imagen-->
+        <div class="carousel-item"> <!-- cuerpo cuarta imagen-->
           <div class="container-fluid">
             <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
               <div class="card  border border-dark ">
                 <div class="row g-0">
-                  <div class="col-md-12 col-lg-8">
-                    <img src="./Assets/Imagenes carrusel seccion 1/FALL 4.jpg"
-                      class="img-fluid rounded-start tamañoImagen" alt="Battle royald, armas">
+                  <div class="col-12 col-lg-8">
+                    <img src="./Assets/Imagenes carrusel seccion 1/fall 5.jpg"
+                      class="img-fluid rounded-start tamañoImagen" alt="armas,consturccion">
                   </div>
                   <div class="col-md-12 col-lg-4">
                     <div class="card-body colorCard">
-                      <h5 class="card-title text-light">Full Guys</h5>
-                      <p class="card-text text-light">Compite con tus amigos y logra ser el unico ganador. Aproveha y
-                        libera tu espirito competitivo</p>
-                        <p class="text-light">Categoria: Battle Royale</p>
-                      <p class="card-text marginLetras d-md-none d-lg-flex"><small class="text-light h4">A partir de US$ 34</small></p>
-                      <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-8"><h5>Ver mas</h2></a>
+                      <h3 class="card-title text-light">Fall Guys</h5>
+                        <p class="card-text colorLetras h4 tamañoPalabras">Compite con tus amigos en multiples carreras
+                          de manera online y multijadors. Solo uno es el Ganador.</p>
+                        <div class="mb-md-5 mb-lg-5">
+                          <p class="colorLetras h6">Categoria: Battle Royale</p>
+                          <p class="colorLetras h6">Lanzamiento: 4 Nov 2020</p>
+                          <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"></i></i></p>
+                        </div>
+                        <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                          <h5>Ver mas</h2>
+                        </a>
                     </div>
                   </div>
                 </div>
@@ -143,13 +180,15 @@
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev ms-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button" data-bs-slide="prev">
+      <a class="carousel-control-prev ms-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button"
+        data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span> <!-- flechas-->
-        <a class="carousel-control-next me-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button" data-bs-slide="next">
+        <a class="carousel-control-next me-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span> <!-- flechas-->
-        </a>  
+        </a>
         <!-- indicadores de imagen-->
         <div class="carousel-indicators d-flex justify-content-center d-none d-md-flex marginIndicador">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -174,8 +213,8 @@
                 </div>
                 <div class="col-md-12 col-lg-4">
                   <div class="card-body colorCard">
-                    <h5 class="card-title text-light">EA FC 24</h5>
-                    <p class="card-text"><small class="text-light">A partir de US$99 </small></p>
+                    <h5 class="card-title text-light posicionPrecio">EA FC 24</h5>
+                    <p class="card-text "><small class="text-light">A partir de US$99 </small></p>
                     <a href="#" class="btn btnCard">Ver mas</a>
                   </div>
                 </div>
@@ -190,7 +229,7 @@
             <div class="card mb-3 border border-dark row col-12 mt-3">
               <div class="row g-0">
                 <div class="col-12 col-lg-8">
-                  <img src="./Assets/Imagenes carrusel seccion 1/gta-5.jpg" class="img-fluid rounded-start tamañoImagen"
+                  <img src="./Assets/Imagenes carrusel seccion 1/98.webp" class="img-fluid rounded-start tamañoImagen"
                     alt="apex,armas">
                 </div>
                 <div class="col-md-12 col-lg-4">
@@ -238,7 +277,7 @@
                 <div class="col-md-12 col-lg-4">
                   <div class="card-body colorCard">
                     <h5 class="card-title text-light">Fortnite</h5>
-                    <p class="card-text"><small class="text-light">A partir de US$50 </small></p>
+                    <p class="card-text "><small class="text-light">A partir de US$50 </small></p>
                     <a href="#" class="btn btnCard">Ver mas</a>
                   </div>
                 </div>
@@ -276,4 +315,5 @@
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
 </body>
+
 </html>
