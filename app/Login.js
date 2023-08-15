@@ -21,6 +21,7 @@ const showPass = () => {
 const userAdmin = document.getElementById('userAdmin');
 const logNone = document.getElementById('logNoneJS');
 const registerNone = document.getElementById('registerNoneJS');
+const closeSessionNone= document.getElementById('closeSessionNoneJS')
 const accountNone = document.getElementById('accountNone');
 const adminMobile = document.getElementById('adminNone');
 const test = document.getElementsByClassName('test');
@@ -28,6 +29,7 @@ const loginModal = document.querySelector('.modal')
 
 userAdmin.style.display = 'none';
 adminMobile.style.display = 'none';
+closeSessionNone.style.display= 'none';
 
 
 const log = () => {
@@ -52,9 +54,11 @@ const log = () => {
     logNone.style.display = 'none';
     registerNone.style.display = 'none';
     accountNone.style.display =  'none';
+    closeSessionNone.style.display= 'inline-block';
     adminMobile.style.display = 'inline-block';
     loginModal.style.display = 'none';
 }
+
 
 
 
