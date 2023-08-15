@@ -32,7 +32,6 @@ const saveGame = () => {
 
 
 
-
     const categoryArray = ["shooter","terror","deportes","carreras","deportesycarreras", "casuales"];   
     const categories = categoryArray.includes(newGame.gameCat);
 
@@ -85,51 +84,51 @@ function addGameToTable(game) {
 
 
     const fila = document.createElement('tr');
+
+
+
+
+    /* Codigo */
     const codeTd = document.createElement('td');
     const codeP = document.createElement('p');
     codeP.textContent = game.gameCode;
+    codeP.classList.add('d-flex','justify-content-center', 'wordsCell');
 
     codeTd.appendChild(codeP);
     fila.appendChild(codeTd);
 
-   
+
+
+
+    /* Nombre */
     const nameTd = document.createElement('td');
-    const nameP = document.createElement('p');
-    
-    nameP.classList.add('d-flex');
-    nameTd.classList.add('d-flex','justify-content-center');
-    
+    const nameP = document.createElement('div');
     nameP.textContent = game.gameName;
-    nameP.style.whiteSpace = 'pre-line';
-    nameP.style.maxWidth = "200px";
-    nameP.style.maxHeight = "100px";
-    nameP.style.overflow = 'auto';
-    nameP.style.wordBreak = 'break-word';
-
-
+    nameP.classList.add('d-flex','justify-content-center','wordsCell','positionsi');
+    
     nameTd.appendChild(nameP);
     fila.appendChild(nameTd);
 
 
+
+
+    /* Categoria */
     const catTd = document.createElement('td');
     const catP = document.createElement('div');
     catP.textContent = game.gameCat;
+    catP.classList.add('d-flex','justify-content-center', 'wordsCell');
 
     catTd.appendChild(catP);
     fila.appendChild(catTd);
 
+
+
+
+    /* Descripcion */
     const descTd = document.createElement('td');
     const descP = document.createElement('div');
-    descP.classList.add('d-flex');
-    descTd.classList.add('d-flex','justify-content-center');
-    
     descP.textContent = game.gameDesc;
-    descP.style.whiteSpace = 'pre-line';
-    descP.style.maxWidth = "200px";
-    descP.style.maxHeight = "100px";
-    descP.style.overflow = 'auto';
-    descP.style.wordBreak = 'break-word';
-   
+    descP.classList.add('d-flex','justify-content-center','wordsCell','positionsi');
 
     descTd.appendChild(descP);
     fila.appendChild(descTd);
@@ -143,7 +142,7 @@ function addGameToTable(game) {
     checkboxCell.classList.add('border');
     
     let divCheck = document.createElement('div');
-    divCheck.classList.add('d-flex', 'justify-content-center');
+    divCheck.classList.add('d-flex', 'justify-content-center','mt-3');
     
     let check = document.createElement('input');
     check.type = 'checkbox';
@@ -267,38 +266,76 @@ const editGame = (gamep) => {
     const descrEdit = document.getElementById('decriptionEdit').value;
     const checkEdit = document.getElementById('checkOutEdit').checked;
     
-    const indexToEdit = storageGamesEdit.findIndex((game) => {
-        return game.gameCode === gamep;
-     });
- 
-     if (indexToEdit !== -1) {
-         // Actualiza las propiedades del juego editado directamente en el arreglo
-         storageGamesEdit[indexToEdit].gameName = nameEdit;
-         storageGamesEdit[indexToEdit].gameCat = categoryEdit;
-         storageGamesEdit[indexToEdit].gameDesc = descrEdit;
-         storageGamesEdit[indexToEdit].gameCheck = checkEdit;
- 
 
-        // Actualiza los campos de la fila directamente
-        const filaEditada = document.querySelector(`tr[data-code="${gamep}"]`);
-        const nameP = filaEditada.querySelector('td:nth-child(2) p'); // Cambia 2 por el índice de columna correcto
-        const catP = filaEditada.querySelector('td:nth-child(3) p'); // Cambia 3 por el índice de columna correcto
-        const descP = filaEditada.querySelector('td:nth-child(4) div'); // Cambia 4 por el índice de columna correcto
-        const checkInput = filaEditada.querySelector('td:nth-child(5) input'); // Cambia 5 por el índice de columna correcto
 
-        nameP.textContent = nameEdit;
-        catP.textContent = categoryEdit;
-        descP.textContent = descrEdit;
-        checkInput.checked = checkEdit;
+    const categoryArrayEdit = ["shooter","terror","deportes","carreras","deportesycarreras", "casuales"];   
+    const categoriesEdit = categoryArrayEdit.includes(categoryEdit);
 
-         // Guarda los cambios en el localStorage
-         localStorage.setItem('games', JSON.stringify(storageGamesEdit));
- 
-         editFila.style.display = 'none';
-         edition.style.display = 'none';
-     } else {
-         console.log("Juego no encontrado en el arreglo.");
-     }
+
+
+    if(!categoriesEdit){
+        alert("No pertenece a una categoria valida");
+        return;
+    }
+
+
+    if(!checkEdit){
+        alert("Recuerde que el juego aun no esta publicado");
+    }
+
+
+
+    const gameNameExist = storageGamesEdit.find((gameN) => {
+        return gameN.gameName === nameEdit;
+    })
+
+
+
+   
+
+    if(gameNameExist){
+        alert(`El juego: ${nameEdit}\nYa existe`);
+        return;
+    }else{
+        
+        const indexToEdit = storageGamesEdit.findIndex((game) => {
+            return game.gameCode === gamep;
+            });
+        
+            if (indexToEdit !== -1) {
+                // Actualiza las propiedades del juego editado directamente en el arreglo
+                storageGamesEdit[indexToEdit].gameName = nameEdit;
+                storageGamesEdit[indexToEdit].gameCat = categoryEdit;
+                storageGamesEdit[indexToEdit].gameDesc = descrEdit;
+                storageGamesEdit[indexToEdit].gameCheck = checkEdit;
+        
+    
+            // Actualiza los campos de la fila directamente
+            const filaEditada = document.querySelector(`tr[data-code="${gamep}"]`);
+            const nameP = filaEditada.querySelector('td:nth-child(2) p'); // Cambia 2 por el índice de columna correcto
+            const catP = filaEditada.querySelector('td:nth-child(3) p'); // Cambia 3 por el índice de columna correcto
+            const descP = filaEditada.querySelector('td:nth-child(4) div'); // Cambia 4 por el índice de columna correcto
+            const checkInput = filaEditada.querySelector('td:nth-child(5) input'); // Cambia 5 por el índice de columna correcto
+    
+            nameP.textContent = nameEdit;
+            catP.textContent = categoryEdit;
+            descP.textContent = descrEdit;
+            checkInput.checked = checkEdit;
+    
+                // Guarda los cambios en el localStorage
+                localStorage.setItem('games', JSON.stringify(storageGamesEdit));
+        
+                editFila.style.display = 'none';
+                edition.style.display = 'none';
+            } else {
+                console.log("Juego no encontrado en el arreglo.");
+            }
+        
+    }
+
+
+
+
 }
 
 
