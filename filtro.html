@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./Styles/filtro.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="fondoFiltros">
+    <div class="container-fluid border border-dark fondoFiltros">
+      <!-- botones-->
+      <div class="row justify-content-between align-items-center p-lg-5 ms-2 fondoBotones mt-4 me-1 me-lg-2">
+        <div class="btn-group btnPantallaGrande btn-group-xs btn-group-sm col-md-8 col-lg-9 " role="group">
+          <button type="button" class="btn btn-outline-primary botonesFiltro col-2"
+            onclick="filtrarJuegos('shooter')">Shooter</button>
+          <button type="button" class="btn btn-outline-primary botonesFiltro col-2"
+            onclick="filtrarJuegos('terror')">Terror</button>
+          <button type="button" class="btn btn-outline-primary botonesFiltro col-2"
+            onclick="filtrarJuegos('deportes')">Deportes</button>
+          <button type="button" class="btn btn-outline-primary botonesFiltro col-2"
+            onclick="filtrarJuegos('carreras')">Carreras</button>
+          <button type="button" class="btn btn-outline-primary botonesFiltro col-2"
+            onclick="filtrarJuegos('casuales')">Casuales</button>
+        </div>
+        <!-- buscador para pantallas grandes-->
+        <form class="col-md-4 col-lg-3 d-none d-sm-flex" role="search" onsubmit="return realizarBusqueda(this)">
+          <input class="form-control me-2 buscarJuego" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-primary botonSearch" type="submit">Search</button>
+        </form>
+      </div>
+      <!-- buscador pantallas mas chicas-->
+      <form class="d-flex col-10 mt-3 ms-2 paddingJuegos" role="search" onsubmit="return realizarBusqueda(this)">
+        <input class="form-control me-2 buscarJuego d-sm-none" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-primary botonSearch2 d-sm-none" type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- cuerpo de las cards-->
+    <div class="container-fluid me-md-1 espaciadoJuegos">
+
+      <!-- card shooters-->
+       <div class=" row col-11 col-md-12 col-lg-12 fondoFiltros ms-3 mt-5 ms-md-1 pe-md-2 ps-lg-4 pe-lg-3 mb-xl-2 paddingCards espaciadoJuegos">
+        <div class="col-md-6 mb-3 cardJuego shooter">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes carrusel seccion 1/tapa2apex.jpg" class="img-fluid rounded-start h-100"
+                  alt="apex,legends">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Apex Legends</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego shooter ">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes carrusel seccion 1/fortnite tapa.jpg" class="img-fluid rounded-start h-100"
+                  alt="fortnite,shooter">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Fortnite</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego shooter ">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/csgo.jpg" class="img-fluid rounded-start h-100 w-100" alt="csgo">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Counter Strike</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego shooter">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/doom eternal.jpg" class="img-fluid rounded-start h-100 w-100" alt="doom">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Doom Eternal</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego shooter">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/battlefiel v.png" class="img-fluid rounded-start h-100"
+                  alt="battlefield">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Battlefield V</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego shooter">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/cod black ops III.jpg" class="img-fluid rounded-start h-100"
+                  alt="cod">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h6 class="card-title tituloCard text-light">Call of Duty Black Ops</h5>
+                    <p class="card-text"></p>
+                    <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cards terror-->
+    <div class="container-fluid">
+      <div class="row col-11 col-md-12 col-lg-12 fondoFiltros ms-3 mt-5 ms-md-1 pe-md-2 ps-lg-4 pe-lg-3 mb-xl-2 paddingCards">
+        <div class="col-md-6 mb-3 cardJuego terror">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/dead by daylight.jpg" class="img-fluid rounded-start h-100"
+                  alt="deadbydaylight">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Dead by Daylight V</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego terror">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/outlastcultrageek.jpg" class="img-fluid rounded-start h-100"
+                  alt="outlast">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Outlast</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego terror">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/images_2017_informes_the_evil_within_2_01.jpg"
+                  class="img-fluid rounded-start h-100" alt="evilwhitihin">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">The evil Whithin 2</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego terror">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/propnight.jpg" class="img-fluid rounded-start h-100" alt="propnight">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Propnight</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego terror">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/maid.jpg" class="img-fluid rounded-start h-100" alt="maid">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Maid of sker</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego terror">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/hunt.webp" class="img-fluid rounded-start h-100" alt="hunt">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Hunt</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cards deporte-->
+    <div class="container-fluid">
+      <div class="row col-11 col-md-12 col-lg-12 fondoFiltros ms-3 ms-md-1 pe-md-2 ps-lg-4 pe-lg-3 paddingCards">
+        <div class="col-md-6 mb-3 cardJuego deportes">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes carrusel seccion 1/haalanmd.webp" class="img-fluid rounded-start h-100"
+                  alt="futbol">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">EA FC 24</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego deportes">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/bascket.jpg" class="img-fluid rounded-start h-100" alt="bascket">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">NBA 2K23</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego deportes">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/efootball-pes-2023.jpg" class="img-fluid rounded-start h-100"
+                  alt="pes">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">efootball 2023</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego deportes">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/super-mega-baseball-4.webp" class="img-fluid rounded-start h-100"
+                  alt="baseball">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h6 class="card-title tituloCard text-light">Super Mega Baseball 4</h5>
+                    <p class="card-text"></p>
+                    <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego deportes">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/riders republic.jpg" class="img-fluid rounded-start h-100"
+                  alt="riders">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Riders Republic</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego deportes">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/pga 2k23.jpg" class="img-fluid rounded-start h-100" alt="pga">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">PGA 2K23</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cards carreras-->
+    <div class="container-fluid">
+      <div class="row col-11 col-md-12 col-lg-12 fondoFiltros ms-3  ms-md-1 pe-md-2 ps-lg-4 pe-lg-3 paddingCards">
+        <div class="col-md-6 mb-3 cardJuego carreras">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/need fr speed.jpg" class="img-fluid rounded-start h-100 w-100"
+                  alt="nfe">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Need for Speed Heat</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego carreras">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/ForzaHorizon4_Steam_Hero.jpg" class="img-fluid rounded-start h-100"
+                  alt="forzahorizon">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Forza Horizon 4</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego carreras">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/most wanted.jpg" class="img-fluid rounded-start h-100"
+                  alt="mostwanted">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h6 class="tituloCard text-light">Need for Speed MW</h6>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego carreras">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/gt.jpg" class="img-fluid rounded-start h-100 w-100" alt="gts">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Gran Turismo Sport</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego carreras">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/f1-manager.jpg" class="img-fluid rounded-start h-100"
+                  alt="f1manager">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">F1 Manager</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego carreras">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/moto gp.jpg" class="img-fluid rounded-start h-100" alt="motogp">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Moto GP 23</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- cards casuales-->
+    <div class="container-fluid">
+      <div class="row col-11 col-md-12 col-lg-12 fondoFiltros ms-3 ms-md-1 pe-md-2 ps-lg-4 pe-lg-3 paddingCards">
+        <div class="col-md-6 mb-3 cardJuego casuales">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/slime rancher.jpg" class="img-fluid rounded-start h-100"
+                  alt="slimerancher">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Slime Rancher</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego casuales">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/american truck simulator.jpg" class="img-fluid rounded-start h-100"
+                  alt="trucksimulator">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h6 class="card-title tituloCard text-light">American Truck Simulator</h5>
+                    <p class="card-text"></p>
+                    <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego casuales">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/cities skylines.jpg" class="img-fluid rounded-start h-100"
+                  alt="skylines,cities">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Cities Skylines</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego casuales">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/sims 4.webp" class="img-fluid rounded-start h-100" alt="sims,4">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Sims 4</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego casuales">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes Filtro/power wash.jpg" class="img-fluid rounded-start h-100 w-100"
+                  alt="power,wash">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Power Wash</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3 cardJuego casuales">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src="./Assets/Imagenes carrusel seccion 1/fall 5.jpg" class="img-fluid rounded-start h-100"
+                  alt="fall,guys">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body fondoCards h-100">
+                  <h5 class="card-title tituloCard text-light">Fall Guys</h5>
+                  <p class="card-text"></p>
+                  <button class="btn btn-primary" type="submit">Ver mas</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </div>
+  <script src="./app/filtro.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
