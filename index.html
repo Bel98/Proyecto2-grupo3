@@ -221,7 +221,7 @@
 
           <!--Modal Login-->
 
-          <div class="modal mt-5" id="loginBtn" tabindex="-2" alt="loginModal">
+          <div class="modal mt-5 close" id="loginBtn" tabindex="-2" alt="loginModal">
             <div class="modal-dialog mt-5">
               <div class="modal-content  loginBtn accountG borderR ">
                 <div class="modal-header bkgDegBlue rounded-start-pill">
@@ -229,7 +229,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body accountG">
-                  <form>
+                  <form >
                     <div class="mb-3">
                       <label for="email" class="col-form-label"></label>
                       <input type="email" class="form-control inputLogin" id="email" placeholder="Email">
@@ -248,11 +248,11 @@
                         </a>
                       </button>
                     </div>
+                    <div class="modal-footer d-flex justify-content-evenly accountG">
+                      <button type="button" class="btn bkgDegBlue textHeader w-25" onclick="log()"  id="loginButton" >log in</button>
+                      <button type="button" class="btn bkgDegBlue textHeader w-25" data-bs-target="#">Sign in</button>
+                    </div>
                   </form>
-                </div>
-                <div class="modal-footer d-flex justify-content-evenly accountG">
-                  <button type="button" class="btn bkgDegBlue textHeader w-25" onclick="log()">log in</button>
-                  <button type="button" class="btn bkgDegBlue textHeader w-25" data-bs-target="#">Sign in</button>
                 </div>
               </div>
             </div>
@@ -361,6 +361,7 @@
                   </table>
                 </div>
                 <div class="modal-footer inputLogin">
+                  <button type="button" class="btn btn-secondary" id="close" onclick="closeF()">Close</button>
                   <button type="button" class="btn btn-primary" id="save" onclick="saveGame()">Save changes</button>
                   <button type="button" class="btn btn-primary" id="edition" >Save edition changes</button>
                 </div>

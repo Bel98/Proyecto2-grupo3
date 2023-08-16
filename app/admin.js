@@ -2,16 +2,28 @@ const newFila = document.getElementById('fila');
 const editFila = document.getElementById('filaEdit');
 const save = document.getElementById('save');
 const edition = document.getElementById('edition');
+const close2 = document.getElementById('close');
+close2.style.display = 'none';
 edition.style.display = 'none';
 save.style.display = 'none';
 newFila.style.display = 'none';
 editFila.style.display = 'none';
 
 const Body = document.getElementById('cuerpo');
+Body.classList.add('tableGame');
 
 const addGame = () => {
     newFila.style.display = 'table-row';
     save.style.display = 'block';
+    close2.style.display = 'block';
+}
+
+const closeF = () => {
+    close2.style.display = 'none';
+    edition.style.display = 'none';
+    save.style.display = 'none';
+    newFila.style.display = 'none';
+    editFila.style.display = 'none';
 }
 
 
@@ -27,6 +39,7 @@ const saveGame = () => {
         gameCat : document.getElementById('category').value.toLowerCase().replace(/\s+/g, ""),
         gameDesc : document.getElementById('decription').value.toLowerCase().replace(/.{10}/g, "$&\n"),
         gameCheck : document.getElementById('checkOut').checked,
+        favorite : '',
     };
     
 
@@ -70,6 +83,18 @@ const saveGame = () => {
 
     addGameToTable(newGame);
 
+
+
+
+
+    document.getElementById('codigo').value = '';
+    document.getElementById('nameG').value = '';
+    document.getElementById('category').value = '';
+    document.getElementById('decription').value = '';
+    document.getElementById('checkOut').checked = '';
+    
+
+
     
     
     newFila.style.display = 'none';   
@@ -86,7 +111,7 @@ function addGameToTable(game) {
     const fila = document.createElement('tr');
 
 
-
+    
 
     /* Codigo */
     const codeTd = document.createElement('td');
@@ -204,7 +229,7 @@ function addGameToTable(game) {
     starIcon.classList.add('bi', 'bi-star-fill');
     starIcon.classList.add('icon-size');
     starButton.appendChild(starIcon);
-
+    starButton.addEventListener('click', () => favourite(game.gameCode,fila,starIcon));
 
     divBottom.appendChild(deleteButton);
     divBottom.appendChild(editButton);
@@ -217,6 +242,9 @@ function addGameToTable(game) {
     
     fila.appendChild(bottomCell);
     Body.appendChild(fila);
+    
+    
+    
 }
 
 
@@ -242,6 +270,40 @@ function deleteGame(gameCode) {
 }
 
 
+function favourite(star,fila,starx){
+    const storageGamesStar = JSON.parse(localStorage.getItem('games')) || [];
+   
+    storageGamesStar.forEach((game) => {
+        if (game.gameCode === star) {
+            game.favorite = !game.favorite; // Cambiar el valor de favorito
+        } else {
+            game.favorite = false;
+        }
+
+        const gameFila = document.querySelector(`tr[data-code="${game.gameCode}"]`);
+       
+
+        if (game.favorite) {
+            gameFila.classList.add('table-warning');
+            
+            gameFila.classList.remove('table-primary');
+            
+        } else {
+            gameFila.classList.add('table-primary');     
+            
+            gameFila.classList.remove('table-warning');
+            
+        }
+
+    });
+    
+    localStorage.setItem('games', JSON.stringify(storageGamesStar));
+   
+    
+}
+
+
+
 
 
 
@@ -249,6 +311,7 @@ const editionIN = (posicion) => {
     btnEdit(posicion)
     editFila.style.display = 'table-row';
     edition.style.display = 'block';
+    close2.style.display = 'block';
 }
 
 const btnEdit = (valor) => {
@@ -347,10 +410,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const storageGamesDOM =  JSON.parse(localStorage.getItem('games')) || [];
     storageGamesDOM.forEach(game => {
         addGameToTable(game);
+
+        const gameFila = document.querySelector(`tr[data-code="${game.gameCode}"]`);
+        if (game.favorite) {
+            gameFila.classList.add('table-warning'); // Cambia el color de fondo para filas favoritas
+        } else {
+            gameFila.classList.add('table-primary');
+        }
     });
 
     // Agrega event listeners a los botones de eliminar
         const deleteButtons = document.querySelectorAll('.delete-button');
+        const starButtons = document.querySelectorAll('.star-button');
         deleteButtons.forEach(button => {
         button.addEventListener('click', () => {
         const gameCode = button.parentElement.parentElement.getAttribute('data-code');
@@ -358,5 +429,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
    
+    starButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const gameCode = button.parentElement.parentElement.getAttribute('data-code');
+            const gameFila = button.parentElement.parentElement;
+            favourite(gameCode, gameFila);
+        });
+    });
 })
    

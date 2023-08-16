@@ -25,7 +25,7 @@ const closeSessionNone= document.getElementById('closeSessionNoneJS')
 const accountNone = document.getElementById('accountNone');
 const adminMobile = document.getElementById('adminNone');
 const test = document.getElementsByClassName('test');
-const loginModal = document.querySelector('.modal')
+
 
 userAdmin.style.display = 'none';
 adminMobile.style.display = 'none';
@@ -45,10 +45,13 @@ const log = () => {
     
     
     if(!passwordRegex.test(password.value)){
-        alert(`Contraseña no valida, recuerde que debe ingresar al menos: \n-8 caracteres como minimo \n-Una mayuscula \n-Una minuscula \n-Un numero  \n-Un simbolo especial`);
-        return;
+        alert(`Contraseña no valida, recuerde que debe ingresar al menos: \n-8 caracteres como minimo 
+        \n-Una mayuscula \n-Una minuscula \n-Un numero  \n-Un simbolo especial`);
+        return  ;
     }
 
+    
+    
     
     userAdmin.style.display = 'inline-block';
     logNone.style.display = 'none';
@@ -56,9 +59,7 @@ const log = () => {
     accountNone.style.display =  'none';
     closeSessionNone.style.display= 'inline-block';
     adminMobile.style.display = 'inline-block';
-    loginModal.style.display = 'none';
+
+    
 }
-
-
-
 
