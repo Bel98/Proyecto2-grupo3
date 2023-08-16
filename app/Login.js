@@ -20,7 +20,7 @@ const showPass = () => {
 
 const userAdmin = document.getElementById('userAdmin');
 const logNone = document.getElementById('logNoneJS');
-const registerNone = document.getElementById('registerNoneJS');
+// const registerNone = document.getElementById('registerNoneJS');
 const closeSessionNone= document.getElementById('closeSessionNoneJS')
 const accountNone = document.getElementById('accountNone');
 const adminMobile = document.getElementById('adminNone');

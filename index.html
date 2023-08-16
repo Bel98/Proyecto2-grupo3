@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" href="./Styles/modalAdmin.css">
     <link rel="stylesheet" href="./Styles/filtro.css">
+    <link rel="stylesheet" href="Styles/register.css">
     <link rel="shortcut icon" href="./Assets/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
@@ -31,10 +32,10 @@
                   </a>
                 </button>                    
               </div>
-              <div class="p-2" id="registerNoneJS">
-                <a class="navbar-brand" href="#">
-                <span>Register</span>
-                </a>
+              <div class="m-2" >
+                <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <span>Resgister</span> 
+                </button>
               </div>
               
               <div class="dropdown pTop ">
@@ -246,6 +247,56 @@
           </div>
         </div>
       </div>
+
+
+          <!--modal register-->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="heading" id="exampleModalLabel" >sing in</h3>
+              <button type="button" class="btn-close btn-cerrar" id="btn-cerrar1" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="d-flex justify-content-center" id="logo-container" >
+              <img class="logo" src="logo.png" alt=""width="50px" height="50px">
+            </div>
+            <div class="modal-body">
+            <form id="miFormulario">
+                <div class="mb-3">
+                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="recipient-name" placeholder="roberto" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="recipient-apellido" class="col-form-label">Apellido:</label>
+                    <input type="text" class="form-control" id="recipient-apellido"placeholder="perez"required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="col-form-label">Email</label>
+                    <input type="email" class="form-control " id="email" placeholder="examle@gmail.com"required>
+              </div>
+              <div class="mb-3">
+                <div><label for="email" class="col-form-label">contraseña</label></div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text inputLogin2" id="basic-addon1" onclick="showPass()">
+                    <i class="bi bi-eye" id="openEye2"></i>
+                    <i class="bi bi-eye-slash" id="closeEye2"></i>
+                  </span>
+                  <input type="password" class="form-control"  id= "Password"placeholder="debe ingresar al menos: una mayuscula, una minuscula, un numero y un simbolo especial" aria-label="Username" aria-describedby="basic-addon1" id="password"required>
+                </div>
+              <div class="modal-footer">
+                <button type="submit" class="btnRegister" id="btnreg">registrarse</button>
+                <button type="button" class="btnRegister btn-cerrar"id="btn-cerrar2" data-bs-dismiss="modal">cerrar</button>
+              </div>
+              <div class="d-flex justify-content-center">
+                  <div id="botonredirec"><h8>¿ya tienes cuenta? <a href="http://" data-bs-target="#">iniciar sesion</a></h8></div>
+                <div id="mensajeRegistro" style="display: none;"><h8>¡Registrado exitosamente!</h8></div>
+              </div> 
+            </div>
+            </form>
+        </div>
+      </div>
+
+
       
       <!--Modal de recucperacion de contraseña-->
       <div class="modal mt-5" id="rePass" tabindex="-2" alt="contraseña">
@@ -1303,6 +1354,7 @@
   </div>
  
 </footer>
+<script src="app/register.js"></script>
 <script src="./app/filtro.js"></script>
 <script src="./app/admin.js"></script>
 <script src="./app/Login.js"></script>
