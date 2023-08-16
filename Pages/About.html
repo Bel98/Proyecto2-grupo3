@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVerse</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="../Assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="../Styles/stylesAbout.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar fixed-top" id="navbar">
+            <div class="container-fluid">
+              <img src="../Assets/logo.png" id="logoNav" alt="logo">
+              <div class="d-none d-md-block d-flex">
+                <div class="d-flex flex-row mb-3">
+
+                  <div class="p-2">
+                    <a class="navbar-brand" href="#">
+                      <span>Home</span>  
+                    </a>
+                  </div>
+
+                  <div class="p-2">
+                    <a class="navbar-brand" href="#">
+                      <span>Login</span>
+                    </a>
+                  </div>
+
+                  <div class="p-2">
+                    <a class="navbar-brand" href="#">
+                    <span>Register</span>
+                    </a>
+                  </div>
+
+                  <div class="p-2">
+                    <a class="navbar-brand" href="#">
+                      <span>Games</span>
+                    </a>
+                  </div>
+
+                  <div class="dropdown">
+                    <button class="btn " type="button" data-bs-toggle="dropdown" >
+                      <a class="navbar-brand" href="#">
+                        <span>Categories</span>
+                      </a>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Action</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Shooter</span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span>Indie</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+
+            <!--OffCanvas Mobile-->
+
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+
+                <!--Header-->
+                <div class="offcanvas-header bg-primary rounded-start-pill">
+                  <img src="../Assets/logo.png" id="logoNav" alt="logo">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Main</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+
+                <!--Body-->
+
+                <div class="offcanvas-body pb-0 px-0 d-flex row">
+                  <div class="px-4">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                          <i class="bi bi-house"></i>
+                          <span>Home</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-top">
+                        <a class="nav-link" href="#">
+                          <i class="bi bi-controller"></i>
+                          <span>Games</span>
+                        </a>
+                      </li>
+                      <li class="nav-item border-top">
+                          <a class="nav-link" href="#">
+                            <i class="bi bi-telephone"></i>
+                            <span>Contact</span>
+                          </a>
+                        </li>
+                        <li class="nav-item border-top">
+                          <a class="nav-link" href="#">
+                            <i class="bi bi-file-person"></i>
+                            <span>About</span>
+                          </a>
+                        </li>
+                      <li class="nav-item border-top dropdown">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-border-width"></i>
+                          <span>Categories</span>
+                          
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <span>Action</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <span>Shooter</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href="#">
+                              <span>Indie</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                  
+                  <!--Account-->
+
+                  <div class="mt-auto   d-flex justify-content-evenly" >
+
+                    <div class="d-flex flex-row w-100  border border-black justify-content-around" id="account">
+
+                      <div class=" m-2"> 
+                        <i class="bi bi-person"></i>
+                        <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                          <span>Login</span>
+                        </button>
+                      </div>
+                      
+                      <div class="border-start border-black"></div>
+
+                      <div>
+                        <div class=" m-2"> 
+                          <i class="bi bi-globe2"></i>
+                          <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <span>Resgister</span> 
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+      
+      <!-- mision y vision -->
+      <div class="container my-4 contenedorMisionMG text-white">
+        <div class="row">
+          <div class="col-md-6 order-md-1">
+            <div class="card-body">
+              <h5 class="card-title colorDeTextoMG"> Misión de Gameverse:</h5>
+              <hr />
+              <p class="colorDeTextoMG">
+                "En Gameverse, nuestra misión es ofrecer experiencias de juego excepcionales que cautiven y emocionen a nuestros clientes. A través de la innovación constante, la pasión por los videojuegos y el compromiso con la excelencia, nos esforzamos por enriquecer la vida de los jugadores y crear un impacto positivo en la comunidad gamer.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 order-md-2">
+            <img src="../Assets/grupo de personas 1.png" class="img-fluid imgMisionMG" loading="lazy"
+              alt="" />
+          </div>
+        </div>
+        <div class="container mt-3">
+          <div class="row">
+            <div class="col-md-6 order-md-1">
+              <img src="../Assets/grupo de personas 2.png" class="img-fluid imgMisionMG" loading="lazy"
+                alt="" />
+            </div>
+            <div class="col-md-6 order-md-2">
+              <div class="card-body">
+                <br />
+                <h6 class="card-title colorDeTextoMG">Visión de Gameverse</h6>
+                <hr />
+                <p class="colorDeTextoMG">
+                  "Nos visualizamos como líderes en la industria de los videojuegos, siendo reconocidos por nuestra creatividad, calidad y diversidad en los productos que ofrecemos. Buscamos expandir nuestra presencia global y convertirnos en una fuente de inspiración para los jugadores de todas las edades. Además, aspiramos a promover la inclusión, la sostenibilidad y la responsabilidad social en el mundo del gaming."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+<!-- cards del equipo -->
+      <section class="container contenedorCardsMG">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 offset-md-4 mb-4">
+                    <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
+                        <img src="../Assets/belen.jpeg" alt="Imagen 1" class="imgCardMG card-img-top img-fluid ">
+                        <div class="overlay">
+                          <div class="overlay-text">  
+                            <h2>Molina Belén</h2>
+                            <h4> 24 años </h4>
+                            <p class="text-white">Expectativa: Aspiro a desarrollar mis habilidades de diseño web y programación, aplicando los conceptos aprendidos para crear una página funcional y estéticamente atractiva. También ganar experiencia en trabajo en equipo y gestión de tiempos.</p>
+                          </div>
+                      </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card cardPersonalMG"onclick="changeImageTemporary(this, '../Assets/cartaAzul.png')">
+                        <img src="../Assets/gabriel.jpeg" alt="Imagen 2" class="imgCardMG card-img-top img-fluid">
+                        <div class="overlay">
+                          <div class="overlay-text">
+                            <h2>Mendez Gabriel</h2>
+                            <h4> 28 años </h4>
+                            <p class="text-white">Expectativa: Poder desarrollar e incorporar nuevas y variadas habilidades en la lógica de programación y sumar experiencia en el trabajo en equipo</p>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
+                        <img src="../Assets/mauro.jpeg" alt="Imagen 3" class="imgCardMG card-img-top img-fluid">
+                        <div class="overlay">
+                          <div class="overlay-text">
+                            <h2>Gutierrez Mauro</h2>
+                            <h4> 34 años </h4>
+                            <p class="text-white">Expectativa: seguir desarrollando mis habilidades de programacion centradome en la practica y el trabajo en equipo.</p>
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaAzul.png')">
+                        <img src="../Assets/franco.jpeg" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
+                          <div class="overlay">
+                          <div class="overlay-text">
+                            <h2>Franco Margagliotti</h2>
+                            <h4> 26 años </h4>
+                            <p class="text-white">Mis objetivos con el proyecto Game Verse son fijar conocimientos sobre JavaScript, profundizar aspectos de la programación y seguir aprendiendo acerca del trabajo en equipo.</p>
+                          </div>
+                      </div>                  
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
+                      <img src="../Assets/matias M.png" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
+                        <div class="overlay">
+                          <div class="overlay-text">
+                            <h2>Maldonado Matias</h2>
+                            <h4> 24 años </h4>
+                            <p class="text-white">Expectativa: Aspiro a desarrollar nuevas habilidades y a poner en práctica lo aprendido en el cursado. Además también aspiro a un mayor desarrollo a la hora de trabajar en grupo.</p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaAzul.png')">
+                      <img src="../Assets/persona 6.png" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
+                        <div class="overlay">
+                          <div class="overlay-text">
+                            <h3>Valdez Nazareno</h3>
+                            <h5>25 años </h5>
+                            <p class="text-white">Expectativas: En este proyecto intentar mejorar la práctica sobre la lógica de JavaScript con lo aprendido en clases y poder ganar experiencia en un proyecto en equipo.</p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
+                      <img src="../Assets/persona 7.png" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
+                        <div class="overlay">
+                          <div class="overlay-text">
+                            <h3>Santiago Delgado</h3>
+                            <h5>-- años </h5>
+                            <p class="text-white">Expectativa:---.</p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </section>  
+    </main>
+    <footer class=" text-white py-3">
+      <!-- logo -->
+      <div class="container text-center " ><img class="logoFooterMG rotacionLogoMG" src="../Assets/logo.png" alt="logo de la pagina">
+      </div>
+      <div class="container text-center text-md-start">
+          <div class="row text-center text-md-start">
+              <!-- info de la pagina -->
+              <div class="col-md-3 col-lg-3 mt-3">
+                  <h5 class="text-uppercase  mb-4 text-primary">GameVerse</h5>
+                  <hr class="mb-4">
+                  <p class="parrafoFooterMG text-light ">¡Esto es GameVerse! Tu destino gamer definitivo. Aquí, vivirás la mejor experiencia de compra de juegos. Mantente actualizado con lo último en títulos y cuenta siempre con nuestro apoyo. ¡Elevemos juntos tu pasión por el gaming!</p>
+
+              </div>
+              <!-- usuario -->
+              <div class="col-md-3 col-lg-3 col-xl-3 mt-3 text-uppercase">
+                  <h5 class="text-uppercase mb-4 text-primary text-lg-center ">usuario</h5>
+                  <hr class="mb-4">
+                  <p class="parrafoFooterMG">
+                      <a href="#" class="text-light  linkFooterMG">Tu cuenta </a>
+                  </p>
+                  <p class="parrafoFooterMG">
+                      <a href="../Pages/error404.html" class="text-light  linkFooterMG">Lista de Favoritos</a>
+                  </p>
+                  <p class="parrafoFooterMG">
+                      <a href="../Pages/error404.html" class="text-light  linkFooterMG">ayuda </a>
+                  </p>
+                  <P class="parrafoFooterMG fw-bold text-decoration-underline text-light">
+                    <a href="../Pages/about.html" class="text-light linkFooterMG"> ¡CONOSENOS MAS!</a>
+                </P>
+
+              </div>
+              <!-- medios de pago  -->
+              <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+                  <h5 class="text-uppercase mb-4 text-primary ">medios de pago</h5>
+                  <hr class="mb-4">
+                  
+                       <p class="parrafoFooterMG text-light"> <i class="text-light fab fa-cc-visa"></i> Visa</p>
+                       <p class="parrafoFooterMG text-light"> <i class="text-light fab fa-cc-mastercard"></i> Mastercard</p>
+                       <p class="parrafoFooterMG text-light"> <i class=" text-light fab fa-cc-paypal"></i> PayPal</p>
+                       <p class="parrafoFooterMG text-light"> <i class="text-light fab fa-cc-amazon-pay"></i> Amazon Pay</p>
+              </div>
+              <!-- contacto -->
+              <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+                  <h5 class="text-uppercase mb-4 text-primary text-md-end text-lg-center "> Contacto</h5>
+                  <hr class="mb-4">
+                  <p class="parrafoFooterMG">
+                      <a href="../Pages/error404.html" class="linkFooterContactoMG linkFooterMG text-light"><i class="text-light bi bi-geo-alt iconFooterMG"></i> Argentina, Tucumán, S.M. de Tucumán  </a>
+                  </p>
+                  <p class="parrafoFooterMG">
+                      <a href="../Pages/error404.html" class="text-light linkFooterContactoMG linkFooterMG"><i class="text-light bi bi-telephone-outbound iconFooterMG"></i> 011-4268268 </a>
+                  </p>
+                  <p class="parrafoFooterMG">
+                      <a href="https://www.instagram.com/" class=" text-lightlinkFooterContactoMG linkFooterMG"><i class="text-light bi bi-instagram iconFooterMG">  Instagram</i></a>
+                  </p>
+              </div>
+              <hr class="mb-4">
+              <!-- copyright -->
+              <div class="text-center mb-2">
+                  <p class="parrafoFooterMG text-light">Copyright © 2023 - Todos los Derechos Reservados</p>
+              </div>
+              <!-- link de redes sociales  -->
+              <div class="text-center">
+                  <ul class="list-unstyled list-inline">
+                      <li class="list-inline-item">
+                          <a href="https://www.twitch.tv/" class="text-light linkFooterMG"><i class="text-light bi bi-twitch iconFooterMG"></i></a>
+                      </li>
+                      <li class="list-inline-item ">
+                          <a href="https://www.youtube.com/" class=" linkFooterMG"><i class="text-light bi bi-youtube iconFooterMG"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                          <a href="https://twitter.com/?lang=es" class=" linkFooterMG">
+                              <i class="text-light bi bi-twitter iconFooterMG"></i></a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a href="../Pages/about.html" class="text-light linkFooterMG">
+                            <i class="text-light bi bi-people-fill iconFooterMG"></i>
+                        </a>
+                      </li>
+
+                  </ul>
+              </div>
+
+          </div>
+
+      </div>
+     
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="../app/appAbout.js"></script>
+</body>
+</html>
