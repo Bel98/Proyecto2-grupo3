@@ -1,0 +1,230 @@
+:root {
+
+    --color-1: #B9B1A9;
+    --color-2: #41487D;
+    --color-3: #201D2C;
+    --color-4: #4F5DAA;
+    --color-5: #68A5A6;
+
+    --color-1: #B9B1A9;
+    --color-1-fuerte: #a39ba2;
+    --color-1-fuerte-2: #8d8786;
+
+    --color-2: #41487D;
+    --color-2-oscuro-fuerte: #393e6a;
+    --color-2-oscuro-fuerte-2: #313457;
+
+    --color-3: #201D2C;
+    --color-3-fuerte: #1a1925;
+    --color-3-fuerte-2: #15141c;
+
+    --color-4: #4F5DAA;
+    --color-4-fuerte: #485696;
+    --color-4-fuerte-2: #414d82;
+
+    --color-5: #68A5A6;
+    --color-5-fuerte: #639da3;
+    --color-5-fuerte-2: #589590;
+
+    }
+
+
+
+/* Estilos generales de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; 
+  }
+
+
+
+
+/* Ajustar el ancho y el margen de los input de texto */
+#table tbody input[type="number"] {
+width: 100%;
+margin: 0 1px; 
+}
+
+#table tbody input[type="text"] {
+width: 100%;
+margin: 0 1px; 
+}
+
+
+
+.btnAdmin .bi {
+    font-size: 1.5rem;
+}
+
+
+
+/* Estilos del cuerpo de la tabla */
+#table tbody {
+max-height: 300px; 
+overflow-y: auto; 
+}
+
+
+
+
+/* Estilos del encabezado de la tabla */
+#table thead th {
+white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+overflow: hidden; /* Oculta cualquier contenido que desborde */
+text-overflow: ellipsis; /* Agrega puntos suspensivos (...) si el texto está oculto */
+}
+
+
+
+
+
+
+/* Estilos de las celdas de la tabla */
+td {
+max-width: 150px; 
+white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+overflow: hidden; /* Oculta cualquier contenido que desborde */
+text-overflow: ellipsis; 
+padding: 6px; 
+}
+
+
+
+
+
+/* Estilos de los botones */
+.btnAdmin {
+font-size: 0.75rem; 
+margin: 2px; 
+padding: 2px 6px; 
+}
+
+
+
+
+
+/* Estilos de fuente en media queries */
+@media (max-width: 992px) {
+th,
+td,
+.btnAdmin {
+    font-size: 0.65rem; 
+}
+.btnAdmin .bi {
+    font-size: 0.65rem;
+    }
+
+}
+
+
+
+
+
+
+
+#table tbody td {
+    
+    color: white; /* Asegura que el texto sea legible en el fondo azul */
+    padding: 6px; /* Añade un espacio interno en las celdas */
+    font-size: 0.65rem; /* Ajusta el tamaño de fuente */
+  }
+
+
+
+
+
+
+
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+#table tbody {
+    max-height: 200px; 
+}
+
+#modalAdmin {
+    max-height: 90vh; 
+}
+}
+
+
+
+
+
+
+
+
+/* Media query para pantallas más pequeñas y ensanchamiento hacia abajo */
+@media (max-width: 478px) {
+#table tbody {
+    height: 25vh; 
+    overflow-y: visible; 
+}
+
+td {
+    font-size: 0.90rem;
+}
+
+
+
+
+.btn-group {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+
+.btnAdmin {
+font-size: 0.65rem;
+width: 100%;
+text-align: left;
+margin: 2px;
+}
+
+
+.btnAdmin .bi {
+font-size: 1rem;
+}
+}
+
+
+
+input[type="checkbox"] {
+
+transform: scale(2);
+}
+
+
+.wordsCell {
+    font-size: 20px;
+}
+
+.positionsi {
+    white-space: pre-line;
+    word-break: break-all;
+}
+
+
+
+.favorito {
+    background-color: red;
+    color: white;
+}
+
+.i .bi-star {
+    color: sandybrown;
+}
+
+
+@media (max-width: 477px) {
+    
+  }
+  
+  
+  
+  
+  
+  
+  

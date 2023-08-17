@@ -1,0 +1,119 @@
+:root {
+
+    --color-1: #B9B1A9;
+    --color-2: #41487D;
+    --color-3: #201D2C;
+    --color-4: #4F5DAA;
+    --color-5: #68A5A6;
+
+    --color-1: #B9B1A9;
+    --color-1-fuerte: #a39ba2;
+    --color-1-fuerte-2: #8d8786;
+
+    --color-2: #41487D;
+    --color-2-oscuro-fuerte: #393e6a;
+    --color-2-oscuro-fuerte-2: #313457;
+
+    --color-3: #201D2C;
+    --color-3-fuerte: #1a1925;
+    --color-3-fuerte-2: #15141c;
+
+    --color-4: #4F5DAA;
+    --color-4-fuerte: #485696;
+    --color-4-fuerte-2: #414d82;
+
+    --color-5: #68A5A6;
+    --color-5-fuerte: #639da3;
+    --color-5-fuerte-2: #589590;
+
+    }
+
+*{
+    color: #68A5A6;
+}
+body{
+  background-color: #15141c;
+}
+/* modal register*/
+.heading {
+  margin: 0%;
+  padding: 0%;
+  color: #a3f3cf;
+}
+.form-control{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+.form-control:hover{
+  background-color: #171717;
+}
+.modal-body{
+    background-color: #15141c; 
+    border-radius: 22px;
+}
+.modal-dialog {
+    width: 496px;
+    height: 650px;
+    position: relative;
+    background-image: linear-gradient(163deg, #313457 0%,#68A5A6 100%);
+    border-radius: 22px;
+    transition: all .3s;
+  }
+    .modal-content{
+      background-color: #15141c;
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+    transition: all .2s;
+    }
+    .modal-content:hover {
+      transform: scale(0.98);
+      border-radius: 20px;
+    }
+    .modal-dialog:hover {
+      box-shadow: 0px 0px 30px 1px rgba(68, 176, 190, 0.3);
+    }
+#mensajeRegistro,#botonredirec{
+    color: #639da3;
+}
+  .btnRegister {
+    padding: 0.5em;
+    padding-left: 1.1em;
+    padding-right: 1.1em;
+    border-radius: 5px;
+    margin-right: 0.5em;
+    border: none;
+    outline: none;
+    transition: .4s ease-in-out;
+    background-image: linear-gradient(163deg, #68A5A6 0%, #201D2C 100%);
+    color: rgb(0, 0, 0);
+  }
+  .inputLogin2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    border-radius: 25px;
+    padding: 0.6em;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #171717;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+}
+@media (max-width: 768px){
+  .modal-dialog,.modal-content,.modal-body,.miFormulario{
+      width: 100%;
+  }
+}
+  /*fin de register*/
+  
