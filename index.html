@@ -4,179 +4,1072 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameVerse</title>
+    <link rel="shortcut icon" href="../Assets/logo.png" type="image/x-icon" /><title>GameVerse</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./Styles/index.css">
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./Styles/modalAdmin.css">
+    <link rel="stylesheet" href="./Styles/filtro.css">
+    <link rel="stylesheet" href="Styles/register.css">
+    <link rel="shortcut icon" href="./Assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
 </head>
 
 <body>
-    <header></header>
-    <main>
+    <header class="mt-5">
+        <nav class="navbar fixed-top mb-5 " id="navbar" alt="NavBar">
+            <div class="container-fluid">
+                <img src="./Assets/logo.png" id="logoNav" alt="logo">
+                <div class="d-none d-md-block d-flex">
+                    <div class="d-flex flex-row mb-3" id="admin">
+                        <div class="p-2">
+                            <a class="navbar-brand" href="./index.html">
+                                <span>Home</span>
+                            </a>
+                        </div>
+                        <div class="px-2 pTop " id="logNoneJS">
+                            <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#loginBtn">
+                                <a class="navbar-brand" href="#">
+                                    <span>Login</span>
+                                </a>
+                            </button>
+                        </div>
+                        <div class="m-2">
+                            <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <span>Register</span>
+                            </button>
+                        </div>
 
-        <div class="container">
-            <div class="row mt-5">
-                <h1>Todos los juegos</h1>
-                <div id="carouselGames" class="carousel slide pt-2">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/American-Truck-Simulator.jpg" class=" img d-inline-flex w-100" alt="American Truck Simulator">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/UNO.jpg" class="img d-inline-flex w-100" alt="UNO">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/Silent-Hill-2.jpg" class="img d-inline-flex w-100" alt="Silent Hill 2">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/WWE-2K23.jpg" class="img d-inline-flex w-100" alt="WWE 2K23">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Need-for-Speed-Heat.jpg" class="img d-inline-flex w-100" alt="Need for Speed Heat">
+                        <div class="dropdown pTop ">
+                            <button class="btn " type="button" data-bs-toggle="dropdown">
+                                <a class="navbar-brand" href="#">
+                                    <span>Categories</span>
+                                </a>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="./index.html#shooter">
+                                        <span>Shooters</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./index.html#terror">
+                                        <span>Terror</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./index.html#sports">
+                                        <span>Deportes y Carreras</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="./index.html#casuals">
+                                        <span>Casuales</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="p-2">
+                            <a class="navbar-brand" href="./index.html#allGames">
+                                <span>Games</span>
+                            </a>
+                        </div>
+                        <div class="p-2">
+                            <a class="navbar-brand" href="./Pages/About.html">
+                                <span>About</span>
+                            </a>
+                        </div>
+                        <div class="p-2">
+                            <a class="navbar-brand" href="#">
+                                <span>Contacto</span>
+                            </a>
+                        </div>
+                        <div class="px-2 pTop test" id="userAdmin">
+                            <button type="button" class="btn link-dark text-decoration-none" data-bs-toggle="modal"
+                                data-bs-target="#modalAdmin">
+                                <a class="navbar-brand" href="#">
+                                    <span>Administracion</span>
+                                </a>
+                            </button>
+                        </div>
+                        <div class="p-2" id="closeSessionNoneJS">
+                            <a class="navbar-brand" href="./index.html">
+                                <span>Cerrar Sesión</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
 
+                <button class="navbar-toggler d-block d-md-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--OffCanvas Mobile-->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel" alt="NavBar-mobile">
+                    <!--Header-->
+                    <div class="offcanvas-header bg-primary rounded-start-pill bkgDegBlue">
+                        <img src="./Assets/logo.png" id="logoNav" alt="logo">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Main</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <!--Body-->
+                    <div class="offcanvas-body pb-0 px-0 d-flex row">
+                        <div class="px-4">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="./index.html">
+                                        <i class="bi bi-house"></i>
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item border-top">
+                                    <a class="nav-link" href="./index.html#allGames">
+                                        <i class="bi bi-controller"></i>
+                                        <span>Games</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item border-top">
+                                    <a class="nav-link" href="#">
+                                        <i class="bi bi-telephone"></i>
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item border-top">
+                                    <a class="nav-link" href="./Pages/About.html">
+                                        <i class="bi bi-file-person"></i>
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item border-top dropdown">
+                                    <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="bi bi-border-width"></i>
+                                        <span>Categories</span>
+
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a class="dropdown-item" href="./index.html#shooter">
+                                                <span>Shooters</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./index.html#terror">
+                                                <span>Terror</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./index.html#sports">
+                                                <span>Deportes y Carreras</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="./index.html#casuals">
+                                                <span>Casuales</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+
+                        <!--Account-->
+                        <div class="mt-auto" id="accountNone" alt="cuenta-mobile">
+                            <div class="d-flex flex-row w-100  border border-black justify-content-around  accountG">
+                                <div class=" m-2">
+                                    <i class="bi bi-person"></i>
+                                    <button type="button" class="btn link-dark text-decoration-none"
+                                        data-bs-toggle="modal" data-bs-target="#loginBtn">
+                                        <span>Login</span>
+                                    </button>
+                                </div>
+                                <div class="border-start border-black"></div>
+                                <div>
+                                    <div class=" m-2">
+                                        <i class="bi bi-globe2"></i>
+                                        <button type="button" class="btn link-dark text-decoration-none"
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <span>Resgister</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/apex/apex22.jpg" class="img d-inline-flex w-100" alt="Apex Legends">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/escape-the-backrooms.jpg" class="img d-inline-flex w-100" alt="Escape the Backrooms">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/Counter-strike.png" class="img d-inline-flex w-100" alt="Counter-strike:Global Offensive">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Forza-Horizon-5.jpg" class="img d-inline-flex w-100" alt="Forza Horizon 5">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/gang-beasts.jpg" class="img d-inline-flex w-100" alt="Gang Beasts">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/F1-Manager-2023.jpg" class="img d-inline-flex w-100" alt="F1 Manager 2023">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/pubg.jpg" class="img d-inline-flex w-100" alt="PUBG">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/Fallout-76-4k-Desktop-Wallpapers.png" class="img d-inline-flex w-100" alt="Fallout 76">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/CitiesSkylines_ColossalOrder_S3-2560x1440-14df106873c918591e49bd9604841e83.jpg" class="img d-inline-flex w-100" alt="Cities Skylines">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/hunt-horrors-of-gilded-age_1920x1080_xtrafondos.com.jpg" class="img d-inline-flex w-100" alt="HUNT">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/fifa2023.jpg" class="img d-inline-flex w-100" alt="FIFA 2023">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/valorant.jpg" class="img d-inline-flex w-100" alt="Valortant">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/Leftr-4-Dead-2.jpg" class="img d-inline-flex w-100" alt="Left 4 Dead 2">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/fortnite-hd-wallpaper-preview.jpg" class="img d-inline-flex w-100" alt="Fornite">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/fall-guys.jpg" class="img d-inline-flex w-100" alt="Fall Guys">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/PGA-TOUR-2K23.jpg" class="img d-inline-flex w-100" alt="PGA TOUR 2K23">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/outlast.jpg" class="img d-inline-flex w-100" alt="Outlast">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/house-fliper.jpg" class="img d-inline-flex w-100" alt="House Flipper">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/NBA 2K23.jpg" class="img d-inline-flex w-100" alt="NBA 2K23">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/team-fortress-2-button-1643168687556.jpg" class="img d-inline-flex w-100" alt="Team Fortress 2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Golf-With-Your-Friends.jpg" class="img d-inline-flex w-100" alt="Golf With Your Friends">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/proyect-zomboide.jpg" class="img d-inline-flex w-100" alt="Proyect Zomboid">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/crysis-3-remastered-2021101610215337_1.jpg" class="img d-inline-flex w-100" alt="Crysis 3">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/Only-Up-Free-Download.png" class="img d-inline-flex w-100" alt="Only Up">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/remnant.jpg" class="img d-inline-flex w-100" alt="Remnant">
-                                </div>
-                            </div>
-                        </div><div class="carousel-item">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/plants-vs-zombies.jpg" class="img d-inline-flex w-100"  alt="Plant vs Zombies">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/power-wash.jpg" class="img d-inline-flex w-100" alt="Power Wash">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/GTAV.jpg" class="img d-inline-flex w-100" alt="Grand Theft Auto V">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Automobilista-2.jpg" class="img d-inline-flex w-100" alt="Automobilista 2">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/remnant2.jpg" class="img d-inline-flex w-100" alt="Remnant 2">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="d-flex justify-content-center align-items-center">
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/SlimeRancher.jpg" class="img d-inline-flex w-100" alt="Slime Rancher">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Riders-Republic.jpg" class="img d-inline-flex w-100" alt="Riders Republic">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/COD-BlackOpsIII.jpg" class="img d-inline-flex w-100" alt="Call of Duty - Black Ops III">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/resident-evil-2.jpg" class="img d-inline-flex w-100" alt="Resident Evil 2">
-                                </div>
-                                <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/the-sims4.jpeg" class="img d-inline-flex w-100" alt="The Sims 4">
+                        <div class="mt-auto" id="adminNone">
+                            <div class="d-flex flex-row w-100  border border-black justify-content-around  accountG">
+                                <div class="m-2 test">
+                                    <i class="bi bi-person"></i>
+                                    <button type="button" class="btn link-dark text-decoration-none"
+                                        data-bs-toggle="modal" data-bs-target="#modalAdmin">
+                                        <span>Administracion</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselGames" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon botones-carousel bg-transparent" aria-hidden="true"></span>
+                </div>
+            </div>
+        </nav>
+
+
+        <!--Modal Login-->
+
+        <div class="modal mt-5" id="loginBtn" tabindex="-2" alt="login">
+            <div class="modal mt-5" id="loginBtn" tabindex="-2" alt="loginModal">
+                <div class="modal-dialog mt-5">
+                    <div class="modal-content  loginBtn accountG borderR ">
+                        <div class="modal-header bkgDegBlue rounded-start-pill">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body accountG">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="email" class="col-form-label"></label>
+                                    <input type="email" class="form-control inputLogin" id="email" placeholder="Email">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text inputLogin2" id="basic-addon1" onclick="showPass()">
+                                        <i class="bi bi-eye" id="openEye"></i>
+                                        <i class="bi bi-eye-slash" id="closeEye"></i>
+                                    </span>
+                                    <input type="password" class="form-control inputLogin" placeholder="Password"
+                                        aria-label="Username" aria-describedby="basic-addon1" id="password">
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button type="button" class="btn link-dark text-decoration-none"
+                                        data-bs-toggle="modal" data-bs-target="#rePass">
+                                        <a class="navbar-brand" id="hoverLogin">
+                                            <span>¿Olvidaste la constraseña?</span>
+                                        </a>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer d-flex justify-content-evenly accountG">
+                            <button type="button" class="btn bkgDegBlue textHeader w-25" onclick="log()">log in</button>
+                            <button type="button" class="btn bkgDegBlue textHeader w-25" data-bs-target="#">Sign
+                                in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--modal register-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="heading" id="exampleModalLabel">sing in</h3>
+                            <button type="button" class="btn-close btn-cerrar" id="btn-cerrar1" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="d-flex justify-content-center" id="logo-container">
+                            <img class="logo" src="logo.png" alt="" width="50px" height="50px">
+                        </div>
+                        <div class="modal-body">
+                            <form id="miFormulario">
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">Nombre:</label>
+                                    <input type="text" class="form-control" id="recipient-name" placeholder="roberto"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="recipient-apellido" class="col-form-label">Apellido:</label>
+                                    <input type="text" class="form-control" id="recipient-apellido" placeholder="perez"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="col-form-label">Email</label>
+                                    <input type="email" class="form-control " id="email" placeholder="examle@gmail.com"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <div><label for="email" class="col-form-label">contraseña</label></div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text inputLogin2" id="basic-addon1"
+                                            onclick="showPass()">
+                                            <i class="bi bi-eye" id="openEye2"></i>
+                                            <i class="bi bi-eye-slash" id="closeEye2"></i>
+                                        </span>
+                                        <input type="password" class="form-control" id="Password"
+                                            placeholder="debe ingresar al menos: una mayuscula, una minuscula, un numero y un simbolo especial"
+                                            aria-label="Username" aria-describedby="basic-addon1" id="password"
+                                            required>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btnRegister" id="btnreg">registrarse</button>
+                                        <button type="button" class="btnRegister btn-cerrar" id="btn-cerrar2"
+                                            data-bs-dismiss="modal">cerrar</button>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <div id="botonredirec">
+                                            <h8>¿ya tienes cuenta? <a href="http://" data-bs-target="#">iniciar
+                                                    sesion</a></h8>
+                                        </div>
+                                        <div id="mensajeRegistro" style="display: none;">
+                                            <h8>¡Registrado exitosamente!</h8>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                    <!--Modal de recucperacion de contraseña-->
+                    <div class="modal mt-5" id="rePass" tabindex="-2" alt="contraseña">
+                        <div class="modal-dialog mt-5">
+                            <div class="modal-content  loginBtn accountG borderR ">
+                                <div class="modal-header bkgDegBlue rounded-start-pill">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Recover password</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body accountG">
+                                    <h4>Pasos a seguir para recuperar la contraseña</h4>
+                                    <ul>
+                                        <li>1- Presionar enviar en el boton "enviar"</li>
+                                        <li>2- Recibiras un correo al Email correspondiente de la cuenta, allí deberas
+                                            presionar en "Recuperar contraseña"</li>
+                                        <li>3- Automaticamente se te redireccionara a la pagina para Ingresar tu nueva
+                                            contraseña</li>
+                                        <li>4- Luego deberas volver a ingresar a tu cuenta con la nueva contraseña</li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer d-flex justify-content-center accountG">
+                                    <button type="button" class="btn bkgDegBlue textHeader"
+                                        data-bs-dismiss="modal">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal de Administracion-->
+                    <div class="modal modal-xl" id="modalAdmin" alt="Administracion">
+                        <div class="modal-dialog">
+                            <div class="modal-content Larger shadow">
+                                <div class="modal-header bkgDegBlue">
+                                    <h5 class="modal-title">Administracion de Productos</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body inputLogin">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <caption>Lista de Productos</caption>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-primary" onclick="addGame()">+ Add
+                                                Game</button>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered " id="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Codigo</th>
+                                                <th scope="col">Nombre</th>
+                                                <th scope="col">Categoria</th>
+                                                <th scope="col">Descripcion</th>
+                                                <th scope="col">Publicado</th>
+                                                <th scope="col">Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="cuerpo">
+                                            <tr id="fila">
+                                                <td><input type="number" id="codigo"></td>
+                                                <td><input type="text" id="nameG"></td>
+                                                <td><input type="text" id="category"></td>
+                                                <td>
+                                                    <div class="mb-3">
+                                                        <textarea class="form-control " id="decription"
+                                                            rows="2"></textarea>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check d-flex justify-content-center">
+                                                        <input class="form-check-input" type="checkbox" id="checkOut">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center border">
+                                                        <div class="btn-group me-2" role="group"
+                                                            aria-label="First group">
+                                                            <button type="button" class="btn btn-primary btnAdmin"><i
+                                                                    class="bi bi-trash"></i></button>
+                                                            <button type="button" class="btn btn-primary btnAdmin"><i
+                                                                    class="bi bi-pencil-square"></i></button>
+                                                            <button type="button" class="btn btn-primary btnAdmin"><i
+                                                                    class="bi bi-star-fill"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr id="filaEdit">
+                                                <td><input type="number" id="codigoEdit"></td>
+                                                <td><input type="text" id="nameGEdit"></td>
+                                                <td><input type="text" id="categoryEdit"></td>
+                                                <td>
+                                                    <div class="mb-3">
+                                                        <textarea class="form-control " id="decriptionEdit"
+                                                            rows="2"></textarea>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-check d-flex justify-content-center">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            id="checkOutEdit">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="modal-footer inputLogin">
+                                    <button type="button" class="btn btn-primary" id="save" onclick="saveGame()">Save
+                                        changes</button>
+                                    <button type="button" class="btn btn-primary" id="edition">Save edition
+                                        changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+    </header>
+
+    <main>
+        <div class="row justify-content-center ">
+            <h2 class="text-center mt-3 d-md-none">Destacados y Recomendados</h2>
+        </div>
+
+
+        <!-- carrusel-->
+        <div id="myCarousel" class="carousel slide carousel-fade d-none d-md-flex flex-md-column margenTiutlo"
+            data-bs-ride="carousel ">
+            <div class="container-fluid ">
+                <div class="row justify-content-center ">
+                    <h2 class="text-center mt-5">Destacados y Recomendados</h2>
+                </div>
+            </div>
+            <div class="carousel-inner marginAbajo tamañoImagen" id="carousel-inner">
+                <div class="carousel-item active"> <!-- cuerpo primera imagen-->
+                    <div class="container-fluid border-dark">
+                        <div class="d-flex justify-content-center carruselPadding border-dark">
+                            <div class="card border border-dark ">
+                                <div class="row g-0 border border-dark">
+                                    <div class="col-md-12 col-lg-8">
+                                        <img src="./Assets/img/section1/haalanmd.webp"
+                                            class="img-fluid rounded-start tamañoImagen" alt="futbol,haaland">
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+                                        <div class="card-body colorCard">
+                                            <h2 class="card-title text-light tituloJuego">EA Sports FC 24</h2>
+                                            <p class="card-text colorLetras h4 tamañoPalabras ">Precompra de la ultimate
+                                                edition para
+                                                disfrutar de 7 dias de
+                                                acceso anticipado. Juga con tu equipo y compite</p>
+                                            <div class="mb-md-5 mb-lg-5">
+                                                <p class="colorLetras h6 marginVermas">Categoria: Deportes</p>
+                                                <p class="colorLetras d-mb-none h6">Lanzamiento: 15 Dic 1993</p>
+                                                <p class="colorLetras h6 mb-lg-5"> <i class="bi bi-microsoft"><i
+                                                            class="bi bi-apple ms-lg-1"></i></i></p>
+                                            </div>
+                                            <div class="pt-3">
+                                                <a href="#" class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                                                    <h5>Ver mas</h2>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- cuerpo segunda imagen-->
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+                            <div class="card border border-dark ">
+                                <div class="row g-0">
+                                    <div class="col-12 col-lg-8">
+                                        <img src="./Assets/img/section1/98.webp"
+                                            class="img-fluid rounded-start tamañoImagen" alt="gta,V">
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+                                        <div class="card-body colorCard">
+                                            <h3 class="card-title text-light tituloJuego">Grand Theft Auto V</h5>
+                                                <p class="card-text colorLetras h4 tamañoPalabras">Explora el
+                                                    galardonado mundo de Los Santos y
+                                                    el condado de Blaine
+                                                    con una resolución de 4K.</p>
+                                                <div class="mb-md-5 mb-lg-5">
+                                                    <p class="colorLetras h6">Categoria: Mundo Abierto</p>
+                                                    <p class="colorLetras h6">Lanzamiento: 13 Abr 2015</p>
+                                                    <p class="colorLetras mb-lg-5 h6"> <i
+                                                            class="bi bi-microsoft"></i></i></p>
+                                                </div>
+                                                <div class="pt-3">
+                                                    <a href="#"
+                                                        class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                                                        <h5>Ver mas</h2>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- cuerpo tercera imagen-->
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+                            <div class="card  border border-dark ">
+                                <div class="row g-0">
+                                    <div class="col-md-12 col-lg-8">
+                                        <img src="./Assets/img/section1/tapa2apex.jpg"
+                                            class="img-fluid rounded-start tamañoImagen" alt="Battle royald, armas">
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+                                        <div class="card-body colorCard">
+                                            <h3 class="card-title text-light">Apex Legends</h5>
+                                                <p class="card-text colorLetras h4 tamañoPalabras">Juego estratégico
+                                                    basado en pelotones y
+                                                    jugabilidad innovadora en
+                                                    la nueva evolución del Battle Royale.</p>
+                                                <div class="mb-md-5 mb-lg-5">
+                                                    <p class="colorLetras h6">Categoria: Shooters</p>
+                                                    <p class="colorLetras h6">Lanzamiento: 4 Nov 2020</p>
+                                                    <p class="colorLetras mb-lg-5 h6"> <i
+                                                            class="bi bi-microsoft"></i></i></p>
+                                                </div>
+                                                <div class="pt-3">
+                                                    <a href="./Pages/apexLegends.html"
+                                                        class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                                                        <h5>Ver mas</h2>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- cuerpo cuarta imagen-->
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+                            <div class="card  border border-dark ">
+                                <div class="row g-0">
+                                    <div class="col-12 col-lg-8">
+                                        <img src="./Assets/img/section1/fortnite tapa.jpg"
+                                            class="img-fluid rounded-start tamañoImagen" alt="armas,consturccion">
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+                                        <div class="card-body colorCard">
+                                            <h3 class="card-title text-light">Fortnite</h5>
+                                                <p class="card-text colorLetras h4 tamañoPalabras">Explora entornos
+                                                    amplios y destruibles. Forma
+                                                    equipo con tus
+                                                    amigos y esprinta, trepa y aplasta a tus rivales.</p>
+                                                <div class="mb-md-5 mb-lg-5">
+                                                    <p class="colorLetras h6">Categoria: Shooters</p>
+                                                    <p class="colorLetras h6">Lanzamiento: 26 Seot 2017</p>
+                                                    <p class="colorLetras mb-lg-5 h6"> <i class="bi bi-microsoft"><i
+                                                                class="bi bi-apple ms-lg-1"></i></i></p>
+                                                </div>
+                                                <div class="pt-3">
+                                                    <a href="#"
+                                                        class="btn btnCard marginBoton col-md-6 col-lg-2  posicionBoton">
+                                                        <h5>Ver mas</h2>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item"> <!-- cuerpo cuarta imagen-->
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-center carruselPadding " id="iconClosed">
+                            <div class="card  border border-dark ">
+                                <div class="row g-0">
+                                    <div class="col-12 col-lg-8">
+                                        <img src="./Assets/Img/section1/fall 5.jpg"
+                                            class="img-fluid rounded-start tamañoImagen" alt="armas,consturccion">
+                                    </div>
+                                    <div class="col-md-12 col-lg-4">
+                                        <div class="card-body colorCard">
+                                            <h3 class="card-title text-light">Fall Guys</h5>
+                                                <p class="card-text colorLetras h4 tamañoPalabras">Compite con tus
+                                                    amigos en multiples carreras
+                                                    de manera online y multijadors. Solo uno es el Ganador.</p>
+                                                <div class="mb-md-5 mb-lg-5">
+                                                    <p class="colorLetras h6">Categoria: Battle Royale</p>
+                                                    <p class="colorLetras h6">Lanzamiento: 4 Nov 2020</p>
+                                                    <p class="colorLetras mb-lg-5 h6"> <i
+                                                            class="bi bi-microsoft"></i></i></p>
+                                                </div>
+                                                <div class="pt-3">
+                                                    <a href="#"
+                                                        class="btn btnCard marginBoton col-md-6 col-lg-2 posicionBoton">
+                                                        <h5>Ver mas</h2>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev ms-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span> <!-- flechas-->
+                <a class="carousel-control-next me-lg-4 marginCarrusel marginFlechas" href="#myCarousel" role="button"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span> <!-- flechas-->
+                </a>
+                <!-- indicadores de imagen-->
+                <div class="carousel-indicators d-flex justify-content-center d-none d-md-flex marginIndicador">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                </div>
+        </div>
+
+        <!-- carrusel de cards para mobile-->
+        <div class="carrusel pt-5 d-md-none"> <!-- card 1-->
+            <div class="elemento">
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div class="card mb-3 border border-dark row col-12 col-md-12 mt-3">
+                            <div class="row g-0">
+                                <div class="col-12 col-lg-8">
+                                    <img src="./Assets/img/section1/haalanmd.webp"
+                                        class="img-fluid rounded-start tamañoImagen" alt="futbol,clubes">
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="card-body colorCard">
+                                        <h5 class="card-title text-light posicionPrecio">EA FC 24</h5>
+                                        <p class="card-text "><small class="text-light">A partir de US$99 </small></p>
+                                        <a href="#" class="btn btnCard">Ver mas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elemento"> <!-- card 2-->
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div class="card mb-3 border border-dark row col-12 mt-3">
+                            <div class="row g-0">
+                                <div class="col-12 col-lg-8">
+                                    <img src="./Assets/Img/section1/98.webp"
+                                        class="img-fluid rounded-start tamañoImagen" alt="apex,armas">
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="card-body colorCard">
+                                        <h5 class="card-title text-light tamañoLetra mt-1">Grand Theft Auto V</h5>
+                                        <p class="card-text"><small class="text-light">A partir de US$50</small></p>
+                                        <a href="#" class="btn btnCard">Ver mas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elemento"> <!-- card 3-->
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div class="card mb-3 border border-dark row col-12 mt-3">
+                            <div class="row g-0">
+                                <div class="col-12 col-lg-8">
+                                    <img src="./Assets/img/section1/tapa2apex.jpg"
+                                        class="img-fluid rounded-start tamañoImagen" alt="apex,armas">
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="card-body colorCard">
+                                        <h5 class="card-title text-light">Apex Legends</h5>
+                                        <p class="card-text"><small class="text-light">A partir de US$34</small></p>
+                                        <a href="#" class="btn btnCard">Ver mas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elemento"> <!-- card 4-->
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div class="card mb-3 border border-dark row col-12 mt-3">
+                            <div class="row g-0">
+                                <div class="col-12 col-lg-8">
+                                    <img src="./Assets/img/section1/fortnite tapa.jpg"
+                                        class="img-fluid rounded-start tamañoImagen" alt="fortnite,armas">
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="card-body colorCard">
+                                        <h5 class="card-title text-light">Fortnite</h5>
+                                        <p class="card-text "><small class="text-light">A partir de US$50 </small></p>
+                                        <a href="#" class="btn btnCard">Ver mas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elemento"> <!-- card 5-->
+                <div class="container-fluid">
+                    <div class="d-flex">
+                        <div class="card mb-3 border border-dark row col-12 mt-3">
+                            <div class="row g-0">
+                                <div class="col-12 col-lg-8">
+                                    <img src="./Assets/img/section1/fall 2.jpg"
+                                        class="img-fluid rounded-start tamañoImagen" alt="competencia">
+                                </div>
+                                <div class="col-md-12 col-lg-4">
+                                    <div class="card-body colorCard">
+                                        <h5 class="card-title text-light">Fall Guys</h5>
+                                        <p class="card-text"><small class="text-light">A partir de US$50</small></p>
+                                        <a href="#" class="btn btnCard">Ver mas</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="container" id="container-main">
+            <div class="row mt-5">
+                <h1 id="allGames">Todos los juegos</h1>
+                <div id="carouselGames" class="carousel slide">
+                    <div class="carousel-inner carousel-container">
+                        <div class="carousel-item active carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/American-Truck-Simulator.jpg"
+                                            class=" img d-inline-flex w-100" alt="American Truck Simulator">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/UNO.jpg"
+                                            class="img d-inline-flex w-100" alt="UNO">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/Silent-Hill-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Silent Hill 2">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/WWE-2K23.jpg"
+                                            class="img d-inline-flex w-100" alt="WWE 2K23">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/Need-for-Speed-Heat.jpg"
+                                            class="img d-inline-flex w-100" alt="Need for Speed Heat">
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/apexLegends.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/apex/apex22.jpg"
+                                            class="img d-inline-flex w-100" alt="Apex Legends">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/escape-the-backrooms.jpg"
+                                            class="img d-inline-flex w-100" alt="Escape the Backrooms">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/Counter-strike.png"
+                                            class="img d-inline-flex w-100" alt="Counter-strike:Global Offensive">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/Forza-Horizon-5.jpg"
+                                            class="img d-inline-flex w-100" alt="Forza Horizon 5">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/gang-beasts.jpg"
+                                            class="img d-inline-flex w-100" alt="Gang Beasts">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/F1-Manager-2023.jpg"
+                                            class="img d-inline-flex w-100" alt="F1 Manager 2023">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/pubg.jpg"
+                                            class="img d-inline-flex w-100" alt="PUBG">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/terror/Fallout-76-4k-Desktop-Wallpapers.png"
+                                            class="img d-inline-flex w-100" alt="Fallout 76">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/CitiesSkylines_ColossalOrder_S3-2560x1440-14df106873c918591e49bd9604841e83.jpg"
+                                            class="img d-inline-flex w-100" alt="Cities Skylines">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/terror/hunt-horrors-of-gilded-age_1920x1080_xtrafondos.com.jpg"
+                                            class="img d-inline-flex w-100" alt="HUNT">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/fifa2023.jpg"
+                                            class="img d-inline-flex w-100" alt="FIFA 2023">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/valorant.jpg"
+                                            class="img d-inline-flex w-100" alt="Valortant">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/Leftr-4-Dead-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Left 4 Dead 2">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/shooter/fortnite-hd-wallpaper-preview.jpg"
+                                            class="img d-inline-flex w-100" alt="Fornite">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/fall-guys.jpg"
+                                            class="img d-inline-flex w-100" alt="Fall Guys">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/PGA-TOUR-2K23.jpg"
+                                            class="img d-inline-flex w-100" alt="PGA TOUR 2K23">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/outlast.jpg"
+                                            class="img d-inline-flex w-100" alt="Outlast">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/house-fliper.jpg"
+                                            class="img d-inline-flex w-100" alt="House Flipper">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/NBA 2K23.jpg"
+                                            class="img d-inline-flex w-100" alt="NBA 2K23">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/shooter/team-fortress-2-button-1643168687556.jpg"
+                                            class="img d-inline-flex w-100" alt="Team Fortress 2">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/sports/Golf-With-Your-Friends.jpg"
+                                            class="img d-inline-flex w-100" alt="Golf With Your Friends">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/proyect-zomboide.jpg"
+                                            class="img d-inline-flex w-100" alt="Proyect Zomboid">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/shooter/crysis-3-remastered-2021101610215337_1.jpg"
+                                            class="img d-inline-flex w-100" alt="Crysis 3">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/Only-Up-Free-Download.png"
+                                            class="img d-inline-flex w-100" alt="Only Up">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/remnant.jpg"
+                                            class="img d-inline-flex w-100" alt="Remnant">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/plants-vs-zombies.jpg"
+                                            class="img d-inline-flex w-100" alt="Plant vs Zombies">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/power-wash.jpg"
+                                            class="img d-inline-flex w-100" alt="Power Wash">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/GTAV.jpg"
+                                            class="img d-inline-flex w-100" alt="Grand Theft Auto V">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/Automobilista-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Automobilista 2">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/remnant2.jpg"
+                                            class="img d-inline-flex w-100" alt="Remnant 2">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item carouselCategories">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/SlimeRancher.jpg"
+                                            class="img d-inline-flex w-100" alt="Slime Rancher">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/Riders-Republic.jpg"
+                                            class="img d-inline-flex w-100" alt="Riders Republic">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/COD-BlackOpsIII.jpg"
+                                            class="img d-inline-flex w-100" alt="Call of Duty - Black Ops III">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/resident-evil-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Resident Evil 2">
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/the-sims4.jpeg"
+                                            class="img d-inline-flex w-100" alt="The Sims 4">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev boton-izq custom-button" type="button"
+                        data-bs-target="#carouselGames" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon botones-carousel bg-transparent"
+                            aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next boton-der" type="button" data-bs-target="#carouselGames" data-bs-slide="next">
+                    <button class="carousel-control-next boton-der" type="button" data-bs-target="#carouselGames"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -186,72 +1079,124 @@
 
 
             <div class="row mt-5">
-                <h1>Shooters</h1>
-                <div id="carouselShooter" class="carousel slide pt-2">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                <h1 id="shooter">Shooters</h1>
+                <div id="carouselShooter" class="carousel slide">
+                    <div class="carousel-inner carousel-container">
+                        <div class="carousel-item active carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/Counter-strike.png" class="img d-inline-flex w-100" alt="Counter-strike:Global Offensive">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/Counter-strike.png"
+                                            class="img d-inline-flex w-100" alt="Counter-strike:Global Offensive">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/apex/apex22.jpg" class="img d-inline-flex w-100" alt="Apex Legends">
+                                    <a href="./Pages/apexLegends.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/apex/apex22.jpg"
+                                            class="img d-inline-flex w-100" alt="Apex Legends">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/pubg.jpg" class="img d-inline-flex w-100" alt="PUBG">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/pubg.jpg"
+                                            class="img d-inline-flex w-100" alt="PUBG">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/valorant.jpg" class="img d-inline-flex w-100" alt="Valortant">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/valorant.jpg"
+                                            class="img d-inline-flex w-100" alt="Valortant">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/fortnite-hd-wallpaper-preview.jpg" class="img d-inline-flex w-100" alt="Fornite">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/shooter/fortnite-hd-wallpaper-preview.jpg"
+                                            class="img d-inline-flex w-100" alt="Fornite">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/hitman-2-4k-wallpaper-preview.jpg" class="img d-inline-flex w-100" alt="Hitman 2">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/shooter/hitman-2-4k-wallpaper-preview.jpg"
+                                            class="img d-inline-flex w-100" alt="Hitman 2">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/team-fortress-2-button-1643168687556.jpg" class="img d-inline-flex w-100" alt="Team Fortress 2">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/shooter/team-fortress-2-button-1643168687556.jpg"
+                                            class="img d-inline-flex w-100" alt="Team Fortress 2">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/crysis-3-remastered-2021101610215337_1.jpg" class="img d-inline-flex w-100" alt="Crysis 3">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/shooter/crysis-3-remastered-2021101610215337_1.jpg"
+                                            class="img d-inline-flex w-100" alt="Crysis 3">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/GTAV.jpg" class="img d-inline-flex w-100" alt="Grand Theft Auto V">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/GTAV.jpg"
+                                            class="img d-inline-flex w-100" alt="Grand Theft Auto V">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/COD-BlackOpsIII.jpg" class="img d-inline-flex w-100" alt="Call of Duty - Black Ops III">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/COD-BlackOpsIII.jpg"
+                                            class="img d-inline-flex w-100" alt="Call of Duty - Black Ops III">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/rainbow-siege.jpg" class="img d-inline-flex w-100" alt="Tom Clancy's Rainbow Six Siege">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/rainbow-siege.jpg"
+                                            class="img d-inline-flex w-100" alt="Tom Clancy's Rainbow Six Siege">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/Battlefield-2042.jpg" class="img d-inline-flex w-100" alt="Battlefield 2042">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/Battlefield-2042.jpg"
+                                            class="img d-inline-flex w-100" alt="Battlefield 2042">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/arma3.jpg" class="img d-inline-flex w-100" alt="Arma III">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/arma3.jpg"
+                                            class="img d-inline-flex w-100" alt="Arma III">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/DOOM-Eternal.jpg" class="img d-inline-flex w-100" alt="DOOM Eternal">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/DOOM-Eternal.jpg"
+                                            class="img d-inline-flex w-100" alt="DOOM Eternal">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/shooter/Battlefield-V.jpg" class="img d-inline-flex w-100" alt="Battlefield V">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/shooter/Battlefield-V.jpg"
+                                            class="img d-inline-flex w-100" alt="Battlefield V">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselShooter" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon botones-carousel bg-transparent" aria-hidden="true"></span>
+                    <button class="carousel-control-prev boton-izq custom-button" type="button"
+                        data-bs-target="#carouselShooter" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon botones-carousel bg-transparent"
+                            aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselShooter" data-bs-slide="next">
+                    <button class="carousel-control-next boton-der custom-button" type="button"
+                        data-bs-target="#carouselShooter" data-bs-slide="next">
                         <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -261,72 +1206,124 @@
 
 
             <div class="row mt-5 ">
-                <h1>Casuales</h1>
-                <div id="carouselCasual" class="carousel slide pt-2">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                <h1 id="casuals">Casuales</h1>
+                <div id="carouselCasual" class="carousel slide">
+                    <div class="carousel-inner carousel-container">
+                        <div class="carousel-item active carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/among-us-game-wallpaper-in-full-hd-img1.png" class="img d-inline-flex w-100" alt="Among Us">
+                                    <a href="./Pages/amongUS.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/among-us-game-wallpaper-in-full-hd-img1.png"
+                                            class="img d-inline-flex w-100" alt="Among Us">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/escape-simulator.jpg" class="img d-inline-flex w-100" alt="Escape Simulator">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/escape-simulator.jpg"
+                                            class="img d-inline-flex w-100" alt="Escape Simulator">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/CitiesSkylines_ColossalOrder_S3-2560x1440-14df106873c918591e49bd9604841e83.jpg" class="img d-inline-flex w-100" alt="Cities Skylines">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/CitiesSkylines_ColossalOrder_S3-2560x1440-14df106873c918591e49bd9604841e83.jpg"
+                                            class="img d-inline-flex w-100" alt="Cities Skylines">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/fall-guys.jpg" class="img d-inline-flex w-100" alt="Fall Guys">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/fall-guys.jpg"
+                                            class="img d-inline-flex w-100" alt="Fall Guys">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/house-fliper.jpg" class="img d-inline-flex w-100" alt="House Flipper">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/house-fliper.jpg"
+                                            class="img d-inline-flex w-100" alt="House Flipper">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/Only-Up-Free-Download.png" class="img d-inline-flex w-100" alt="Only Up">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/Only-Up-Free-Download.png"
+                                            class="img d-inline-flex w-100" alt="Only Up">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/plants-vs-zombies.jpg" class="img d-inline-flex w-100"  alt="Plant vs Zombies">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/plants-vs-zombies.jpg"
+                                            class="img d-inline-flex w-100" alt="Plant vs Zombies">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/power-wash.jpg" class="img d-inline-flex w-100" alt="Power Wash">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/power-wash.jpg"
+                                            class="img d-inline-flex w-100" alt="Power Wash">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/SlimeRancher.jpg" class="img d-inline-flex w-100" alt="Slime Rancher">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/SlimeRancher.jpg"
+                                            class="img d-inline-flex w-100" alt="Slime Rancher">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/the-sims4.jpeg" class="img d-inline-flex w-100" alt="The Sims 4">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/the-sims4.jpeg"
+                                            class="img d-inline-flex w-100" alt="The Sims 4">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/vrchat-logo-poster-dxxcaljtm1x5c92l.jpg" class="img d-inline-flex w-100" alt="VR Chat">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/vrchat-logo-poster-dxxcaljtm1x5c92l.jpg"
+                                            class="img d-inline-flex w-100" alt="VR Chat">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/worms.png" class="img d-inline-flex w-100" alt="Worms Battlegrounds">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/worms.png"
+                                            class="img d-inline-flex w-100" alt="Worms Battlegrounds">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/gang-beasts.jpg" class="img d-inline-flex w-100" alt="Gang Beasts">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/gang-beasts.jpg"
+                                            class="img d-inline-flex w-100" alt="Gang Beasts">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/UNO.jpg" class="img d-inline-flex w-100" alt="UNO">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/casuals/UNO.jpg"
+                                            class="img d-inline-flex w-100" alt="UNO">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/casuals/American-Truck-Simulator.jpg" class=" img d-inline-flex w-100" alt="American Truck Simulator">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/casuals/American-Truck-Simulator.jpg"
+                                            class=" img d-inline-flex w-100" alt="American Truck Simulator">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselCasual" data-bs-slide="prev">
+                    <button class="carousel-control-prev boton-izq custom-button" type="button"
+                        data-bs-target="#carouselCasual" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselCasual" data-bs-slide="next">
+                    <button class="carousel-control-next boton-der custom-button" type="button"
+                        data-bs-target="#carouselCasual" data-bs-slide="next">
                         <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -335,72 +1332,123 @@
 
 
             <div class="row mt-5 ">
-                <h1>Terror</h1>
-                <div id="carouselTerror" class="carousel slide pt-2">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                <h1 id="terror">Terror</h1>
+                <div id="carouselTerror" class="carousel slide">
+                    <div class="carousel-inner carousel-container">
+                        <div class="carousel-item active carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
-                                <div class="div-img">
-                                    <img height="150" width="250" src="./Assets/img/terror/DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7.jpg" class="img d-inline-flex w-100" alt="Dead by Daylight">
+                                <div>
+                                    <a href="./Pages/deadByDeadligth.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/terror/DeadbyDaylight_BehaviourInteractive_S1_2560x1440-a32581cf9948a9a2e24b2ff15c1577c7.jpg"
+                                            class="img d-inline-flex w-100" alt="Dead by Daylight">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/escape-the-backrooms.jpg" class="img d-inline-flex w-100" alt="Escape the Backrooms">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/escape-the-backrooms.jpg"
+                                            class="img d-inline-flex w-100" alt="Escape the Backrooms">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/Fallout-76-4k-Desktop-Wallpapers.png" class="img d-inline-flex w-100" alt="Fallout 76">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/terror/Fallout-76-4k-Desktop-Wallpapers.png"
+                                            class="img d-inline-flex w-100" alt="Fallout 76">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/hunt-horrors-of-gilded-age_1920x1080_xtrafondos.com.jpg" class="img d-inline-flex w-100" alt="HUNT">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/terror/hunt-horrors-of-gilded-age_1920x1080_xtrafondos.com.jpg"
+                                            class="img d-inline-flex w-100" alt="HUNT">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/Leftr-4-Dead-2.jpg" class="img d-inline-flex w-100" alt="Left 4 Dead 2">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/Leftr-4-Dead-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Left 4 Dead 2">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/outlast.jpg" class="img d-inline-flex w-100" alt="Outlast">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/outlast.jpg"
+                                            class="img d-inline-flex w-100" alt="Outlast">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/proyect-zomboide.jpg" class="img d-inline-flex w-100" alt="Proyect Zomboid">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/proyect-zomboide.jpg"
+                                            class="img d-inline-flex w-100" alt="Proyect Zomboid">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/remnant.jpg" class="img d-inline-flex w-100" alt="Remnant">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/remnant.jpg"
+                                            class="img d-inline-flex w-100" alt="Remnant">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/remnant2.jpg" class="img d-inline-flex w-100" alt="Remnant 2">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/remnant2.jpg"
+                                            class="img d-inline-flex w-100" alt="Remnant 2">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/resident-evil-2.jpg" class="img d-inline-flex w-100" alt="Resident Evil 2">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/resident-evil-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Resident Evil 2">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/resident-evil-4.jpg" class="img d-inline-flex w-100" alt="Resident Evil 4">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/resident-evil-4.jpg"
+                                            class="img d-inline-flex w-100" alt="Resident Evil 4">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/Silent-Hill-2.jpg" class="img d-inline-flex w-100" alt="Silent Hill 2">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/Silent-Hill-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Silent Hill 2">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/sons-of-the-forest.jpeg" class="img d-inline-flex w-100" alt="Sons of the Forest">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/sons-of-the-forest.jpeg"
+                                            class="img d-inline-flex w-100" alt="Sons of the Forest">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/The-Forest.jpg" class="img d-inline-flex w-100" alt="The Forest">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/terror/The-Forest.jpg"
+                                            class="img d-inline-flex w-100" alt="The Forest">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/terror/wp7775348-phasmophobia-wallpapers.jpg" class="img d-inline-flex w-100" alt="Phasmophobia">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/terror/wp7775348-phasmophobia-wallpapers.jpg"
+                                            class="img d-inline-flex w-100" alt="Phasmophobia">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselTerror" data-bs-slide="prev">
+                    <button class="carousel-control-prev boton-izq custom-button" type="button"
+                        data-bs-target="#carouselTerror" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselTerror" data-bs-slide="next">
+                    <button class="carousel-control-next boton-der custom-button" type="button"
+                        data-bs-target="#carouselTerror" data-bs-slide="next">
                         <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -408,72 +1456,124 @@
             </div>
 
             <div class="row mt-5 ">
-                <h1>Deportes y Carreras</h1>
-                <div id="carouselSports" class="carousel slide pt-2 mb-5">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
+                <h1 id="sports">Deportes y Carreras</h1>
+                <div id="carouselSports" class="carousel slide mb-5">
+                    <div class="carousel-inner carousel-container">
+                        <div class="carousel-item active carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
-                                <div >
-                                    <img height="150" width="250" src="./Assets/img/sports/fifa2023.jpg" class="img d-inline-flex w-100" alt="FIFA 2023">
+                                <div>
+                                    <a href="./Pages/fc24.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/fc24/fc24-2png.png"
+                                            class="img d-inline-flex w-100" alt="FC24">
+                                    </a>
                                 </div>
-                                <div >
-                                    <img height="150" width="250" src="./Assets/img/sports/NBA 2K23.jpg" class="img d-inline-flex w-100" alt="NBA 2K23">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/NBA 2K23.jpg"
+                                            class="img d-inline-flex w-100" alt="NBA 2K23">
+                                    </a>
                                 </div>
-                                <div >
-                                    <img height="150" width="250" src="./Assets/img/sports/Forza-Horizon-5.jpg" class="img d-inline-flex w-100" alt="Forza Horizon 5">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/fifa2023.jpg"
+                                            class="img d-inline-flex w-100" alt="FIFA 2023">
+                                    </a>
                                 </div>
-                                <div >
-                                    <img height="150" width="250" src="./Assets/img/sports/F1-Manager-2023.jpg" class="img d-inline-flex w-100" alt="F1 Manager 2023">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/F1-Manager-2023.jpg"
+                                            class="img d-inline-flex w-100" alt="F1 Manager 2023">
+                                    </a>
                                 </div>
-                                <div >
-                                    <img height="150" width="250" src="./Assets/img/sports/WWE-2K23.jpg" class="img d-inline-flex w-100" alt="WWE 2K23">
+                                <div>
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/WWE-2K23.jpg"
+                                            class="img d-inline-flex w-100" alt="WWE 2K23">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/PGA-TOUR-2K23.jpg" class="img d-inline-flex w-100" alt="PGA TOUR 2K23">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/PGA-TOUR-2K23.jpg"
+                                            class="img d-inline-flex w-100" alt="PGA TOUR 2K23">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Football-Manager-2023.jpg" class="img d-inline-flex w-100" alt="Football Manager 2023">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/sports/Football-Manager-2023.jpg"
+                                            class="img d-inline-flex w-100" alt="Football Manager 2023">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Golf-With-Your-Friends.jpg" class="img d-inline-flex w-100" alt="Golf With Your Friends">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/sports/Golf-With-Your-Friends.jpg"
+                                            class="img d-inline-flex w-100" alt="Golf With Your Friends">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Automobilista-2.jpg" class="img d-inline-flex w-100" alt="Automobilista 2">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/Automobilista-2.jpg"
+                                            class="img d-inline-flex w-100" alt="Automobilista 2">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Riders-Republic.jpg" class="img d-inline-flex w-100" alt="Riders Republic">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/Riders-Republic.jpg"
+                                            class="img d-inline-flex w-100" alt="Riders Republic">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item carouselCategories">
                             <div class="d-flex justify-content-center align-items-center">
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Pro-Cycling-Manager-2023.jpg" class="img d-inline-flex w-100" alt="Pro Cycling Manager 2023">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/sports/Pro-Cycling-Manager-2023.jpg"
+                                            class="img d-inline-flex w-100" alt="Pro Cycling Manager 2023">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Liftoff-FPV-Drone-Racing.jpg" class="img d-inline-flex w-100" alt="Liftoff: FPV Drone Racing">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/sports/Liftoff-FPV-Drone-Racing.jpg"
+                                            class="img d-inline-flex w-100" alt="Liftoff: FPV Drone Racing">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Need-for-Speed-Heat.jpg" class="img d-inline-flex w-100" alt="Need for Speed Heat">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/Need-for-Speed-Heat.jpg"
+                                            class="img d-inline-flex w-100" alt="Need for Speed Heat">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/Super-Mega-Baseball-4.jpg" class="img d-inline-flex w-100" alt="Super Mega Baseball 4">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250"
+                                            src="./Assets/img/sports/Super-Mega-Baseball-4.jpg"
+                                            class="img d-inline-flex w-100" alt="Super Mega Baseball 4">
+                                    </a>
                                 </div>
                                 <div>
-                                    <img height="150" width="250" src="./Assets/img/sports/MotoGP-23.jpg" class="img d-inline-flex w-100" alt="MotoGP 23">
+                                    <a href="./Pages/error404.html">
+                                        <img height="150" width="250" src="./Assets/img/sports/MotoGP-23.jpg"
+                                            class="img d-inline-flex w-100" alt="MotoGP 23">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev boton-izq custom-button" type="button" data-bs-target="#carouselSports" data-bs-slide="prev">
+                    <button class="carousel-control-prev boton-izq custom-button" type="button"
+                        data-bs-target="#carouselSports" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon bg-transparent" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next boton-der custom-button" type="button" data-bs-target="#carouselSports" data-bs-slide="next">
+                    <button class="carousel-control-next boton-der custom-button" type="button"
+                        data-bs-target="#carouselSports" data-bs-slide="next">
                         <span class="carousel-control-next-icon bg-transparent" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -482,11 +1582,113 @@
 
         </div>
     </main>
-    <footer></footer>
+    <footer class=" text-white py-3">
+        <!-- logo -->
+        <div class="container text-center "><img class="logoFooterMG rotacionLogoMG" src="./Assets/logo.png"
+                alt="logo de la pagina">
+        </div>
+        <div class="container text-center text-md-start">
+            <div class="row text-center text-md-start">
+                <!-- info de la pagina -->
+                <div class="col-md-3 col-lg-3 mt-3">
+                    <h5 class="text-uppercase  mb-4 text-primary">GameVerse</h5>
+                    <hr class="mb-4">
+                    <p class="parrafoFooterMG text-light ">¡Esto es GameVerse! Tu destino gamer definitivo. Aquí,
+                        vivirás la mejor experiencia de compra de juegos. Mantente actualizado con lo último en títulos
+                        y cuenta siempre con nuestro apoyo. ¡Elevemos juntos tu pasión por el gaming!</p>
+
+                </div>
+                <!-- usuario -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mt-3 text-uppercase">
+                    <h5 class="text-uppercase mb-4 text-primary text-lg-center ">usuario</h5>
+                    <hr class="mb-4">
+                    <p class="parrafoFooterMG">
+                        <a href="#" class="text-light  linkFooterMG">Tu cuenta </a>
+                    </p>
+                    <p class="parrafoFooterMG">
+                        <a href="../Pages/error404.html" class="text-light  linkFooterMG">Lista de Favoritos</a>
+                    </p>
+                    <p class="parrafoFooterMG">
+                        <a href="../Pages/error404.html" class="text-light  linkFooterMG">ayuda </a>
+                    </p>
+                    <P class="parrafoFooterMG fw-bold text-decoration-underline text-light">
+                        <a href="../Pages/about.html" class="text-light linkFooterMG"> ¡CONOSENOS MAS!</a>
+                    </P>
+
+                </div>
+                <!-- medios de pago  -->
+                <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+                    <h5 class="text-uppercase mb-4 text-primary ">medios de pago</h5>
+                    <hr class="mb-4">
+
+                    <p class="parrafoFooterMG text-light"> <i class="text-light fab fa-cc-visa"></i> Visa</p>
+                    <p class="parrafoFooterMG text-light"> <i class="text-light fab fa-cc-mastercard"></i> Mastercard
+                    </p>
+                    <p class="parrafoFooterMG text-light"> <i class=" text-light fab fa-cc-paypal"></i> PayPal</p>
+                    <p class="parrafoFooterMG text-light"> <i class="text-light fab fa-cc-amazon-pay"></i> Amazon Pay
+                    </p>
+                </div>
+                <!-- contacto -->
+                <div class="col-md-3 col-lg-3 col-xl-3  mt-3">
+                    <h5 class="text-uppercase mb-4 text-primary text-md-end text-lg-center "> Contacto</h5>
+                    <hr class="mb-4">
+                    <p class="parrafoFooterMG">
+                        <a href="../Pages/error404.html" class="linkFooterContactoMG linkFooterMG text-light"><i
+                                class="text-light bi bi-geo-alt iconFooterMG"></i> Argentina, Tucumán, S.M. de Tucumán
+                        </a>
+                    </p>
+                    <p class="parrafoFooterMG">
+                        <a href="../Pages/error404.html" class="text-light linkFooterContactoMG linkFooterMG"><i
+                                class="text-light bi bi-telephone-outbound iconFooterMG"></i> 011-4268268 </a>
+                    </p>
+                    <p class="parrafoFooterMG">
+                        <a href="https://www.instagram.com/" class=" text-lightlinkFooterContactoMG linkFooterMG"><i
+                                class="text-light bi bi-instagram iconFooterMG"> Instagram</i></a>
+                    </p>
+                </div>
+                <hr class="mb-4">
+                <!-- copyright -->
+                <div class="text-center mb-2">
+                    <p class="parrafoFooterMG text-light">Copyright © 2023 - Todos los Derechos Reservados</p>
+                </div>
+                <!-- link de redes sociales  -->
+                <div class="text-center">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.twitch.tv/" class="text-light linkFooterMG"><i
+                                    class="text-light bi bi-twitch iconFooterMG"></i></a>
+                        </li>
+                        <li class="list-inline-item ">
+                            <a href="https://www.youtube.com/" class=" linkFooterMG"><i
+                                    class="text-light bi bi-youtube iconFooterMG"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://twitter.com/?lang=es" class=" linkFooterMG">
+                                <i class="text-light bi bi-twitter iconFooterMG"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="../Pages/about.html" class="text-light linkFooterMG">
+                                <i class="text-light bi bi-people-fill iconFooterMG"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="app/register.js"></script>
+    <script src="./app/filtro.js"></script>
+    <script src="./app/admin.js"></script>
+    <script src="./app/Login.js"></script>
     <script src="./app/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
