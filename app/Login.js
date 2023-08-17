@@ -20,13 +20,14 @@ const showPass = () => {
 
 const userAdmin = document.getElementById('userAdmin');
 const logNone = document.getElementById('logNoneJS');
+const registerNone = document.getElementById('registerNoneJS');
 const closeSessionNone= document.getElementById('closeSessionNoneJS')
 const accountNone = document.getElementById('accountNone');
 const adminMobile = document.getElementById('adminNone');
 const test = document.getElementsByClassName('test');
 
 
-userAdmin.style.display = 'none';
+// userAdmin.style.display = 'none';
 adminMobile.style.display = 'none';
 closeSessionNone.style.display= 'none';
 
