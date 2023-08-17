@@ -1,0 +1,120 @@
+:root {
+
+    --color-1: #B9B1A9;
+    --color-2: #41487D;
+    --color-3: #201D2C;
+    --color-4: #4F5DAA;
+     --color-5: #68A5A6;
+    
+     --color-1: #B9B1A9;
+     --color-1-fuerte: #a39ba2;
+    --color-1-fuerte-2: #8d8786;
+    
+    --color-2: #41487D;
+    --color-2-oscuro-fuerte: #393e6a;
+    --color-2-oscuro-fuerte-2: #313457;
+    
+    --color-3: #201D2C;
+    --color-3-fuerte: #1a1925;
+    --color-3-fuerte-2: #15141c;
+    
+    --color-4: #4F5DAA;
+    --color-4-fuerte: #485696;
+    --color-4-fuerte-2: #414d82;
+    
+    --color-5: #68A5A6;
+    --color-5-fuerte: #639da3;
+    --color-5-fuerte-2: #589590;
+    
+     }
+
+
+.btnCard{
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var( --color-5);
+    --bs-btn-border-color: var( --color-5);
+   
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg:var(--color-5-fuerte );
+    --bs-btn-hover-border-color: var(--color-5-fuerte);
+  
+    --bs-btn-active-color:var(--bs-white) ;
+    --bs-btn-active-bg:  var(--color-5-fuerte-2);
+    --bs-btn-active-border-color:var(--color-5-fuerte-2);
+  }
+
+ /* estilos*/
+
+
+
+.marginContainer {
+  margin-bottom: 100px;
+}
+
+ /* colores*/
+
+.fondoFiltros {
+    background-color: #1a1925;
+}
+
+.fondoBotones {
+    background-color: #41487D;
+}
+.fondoCards {
+    background-color: #41487D;
+}
+
+/* Cambiar color de texto y fondo de los botones en btn-group */
+.btn-group .btn {
+    color: white;
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-group .btn:hover {
+    background-color:#201D2C;
+    border-color: #0056b3;
+  }
+
+  .btn-group .btn.active {
+    background-color:#201D2C ; /* Cambia este color a tu preferencia */
+    color: white; /* Cambia el color del texto si es necesario */
+    border-color:#201D2C; /* Cambia el color del borde si es necesario */
+  }
+  
+
+/* Media query */
+@media (max-width: 280px) {
+  .btn-group .btn {
+    font-size: 7px;
+  }
+  .paddingCards {
+    padding-right: 7px;
+  }
+  .letraTamaño {
+    font-size: 7px;
+  }
+
+}
+@media (max-width: 540px) {
+  .paddingJuegos {
+    padding-left: 60px;
+  }
+  .espaciadoJuegos {
+    padding-left: 15px;
+  }
+ }
+
+
+@media (max-width: 768px) {
+  .tamañoTitulos {
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+  

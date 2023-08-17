@@ -1,0 +1,151 @@
+:root {
+    --color-1: #b9b1a9;
+    --color-2: #41487d;
+    --color-3: #201d2c;
+    --color-4: #4f5daa;
+    --color-5: #68a5a6;
+  
+    --color-1: #b9b1a9;
+    --color-1-fuerte: #a39ba2;
+    --color-1-fuerte-2: #8d8786;
+  
+    --color-2: #41487d;
+    --color-2-oscuro-fuerte: #393e6a;
+    --color-2-oscuro-fuerte-2: #313457;
+  
+    --color-3: #201d2c;
+    --color-3-fuerte: #1a1925;
+    --color-3-fuerte-2: #15141c;
+  
+    --color-4: #4f5daa;
+    --color-4-fuerte: #485696;
+    --color-4-fuerte-2: #414d82;
+  
+    --color-5: #68a5a6;
+    --color-5-fuerte: #639da3;
+    --color-5-fuerte-2: #589590;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppings";
+  }
+  body {
+    height: 100vh;
+    font-family: "poppings", sans-serif;
+    background: var(--color-3);
+    color: white;
+    font-weight: 900;
+  }
+  .heigh-vh {
+    height: 100vh;
+  }
+  .img-container {
+    width: 6.25rem;
+  }
+  .main-heading {
+    font-size: 13.75rem;
+    font-weight: 700;
+  }
+  
+  .page_404 {
+    padding: 2.5rem 0;
+    background: #000;
+    font-family: "poppings";
+  }
+  
+  .page_404 img {
+    width: 100%;
+  }
+  .four_zero_four_bg {
+    background: url("./2RNE.gif");
+    height: 89.5vh;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .btn {
+    color: white;
+    font-weight: 600;
+    border: 1px solid white;
+    background: transparent;
+  }
+  .btn:hover {
+    color: black;
+    background: #fff;
+    border-color: #000;
+  }
+  .btn:active {
+    background-color: #000 !important;
+    border-color: #000 !important;
+  }
+  #d1 {
+    text-align: center;
+    animation-name: bord;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+  }
+  
+  #d2 {
+    text-align: center;
+    animation-name: type;
+    animation-duration: 2s;
+  }
+  #d3 {
+    text-align: center;
+    overflow: hidden;
+    border-right: 0.15em solid teal;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: me 3.5s steps(40, end), bord 0.75s step-end infinite;
+  }
+  
+  @keyframes type {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes me {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes bord {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      color: rgb(255, 255, 255);
+      border-color: rgb(255, 255, 255);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .main-heading {
+      font-size: 11.875rem;
+    }
+    .error-message {
+      font-size: 1.125rem;
+    }
+    #logoNav {
+      width: 15vw;
+    }
+  }
+  
+  @media (min-width: 600px) {
+    #logoNav {
+      width: 5vw;
+    }
+  }
+  
