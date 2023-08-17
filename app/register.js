@@ -65,12 +65,3 @@ alert("registro exsitoso");
 function resetForm() {
     form.reset();
 }
-// referencias a los botones de cierre
-// const cerrarButton1 = document.getElementById('btn-cerrar1');
-// const cerrarButton2 = document.getElementById('btn-cerrar2');
-// Asigna la función resetForm a cada botón
-// cerrarButton1.addEventListener('click', resetForm);
-// cerrarButton2.addEventListener('click', resetForm);
-// redireccion a modal login
-// document.getElementById("loginBtn").style.display = "inline-block";
-// document.getElementById("exampleModal").style.display = "none";

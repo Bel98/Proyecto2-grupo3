@@ -26,7 +26,7 @@ const adminMobile = document.getElementById('adminNone');
 const test = document.getElementsByClassName('test');
 const loginform = document.getElementById('logForm');
 
-// userAdmin.style.display = 'none';
+userAdmin.style.display = 'none';
 adminMobile.style.display = 'none';
 closeSessionNone.style.display= 'none';
 
