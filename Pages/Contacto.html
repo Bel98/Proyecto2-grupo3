@@ -176,139 +176,30 @@
             </div>
         </nav>
     </header>
-    <main>
-      
-      <!-- mision y vision -->
-      <div class="container my-4 contenedorMisionMG text-white">
-        <div class="row">
-          <div class="col-md-6 order-md-1">
-            <div class="card-body">
-              <h5 class="card-title colorDeTextoMG"> Misión de Gameverse:</h5>
-              <hr />
-              <p class="colorDeTextoMG">
-                "En Gameverse, nuestra misión es ofrecer experiencias de juego excepcionales que cautiven y emocionen a nuestros clientes. A través de la innovación constante, la pasión por los videojuegos y el compromiso con la excelencia, nos esforzamos por enriquecer la vida de los jugadores y crear un impacto positivo en la comunidad gamer.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 order-md-2">
-            <img src="../Assets/grupo de personas 1.png" class="img-fluid imgMisionMG" loading="lazy"
-              alt="" />
-          </div>
+   
+    <main class="container contenedorMG">
+      <div class="row">
+        <div class="col-md-6 imagenColumnaMG pt-4">
+          <img src="../Assets/grupo de personas 1.png" alt="Imagen de contacto" class="img-fluid">
         </div>
-        <div class="container mt-3">
-          <div class="row">
-            <div class="col-md-6 order-md-1">
-              <img src="../Assets/grupo de personas 2.png" class="img-fluid imgMisionMG" loading="lazy"
-                alt="" />
-            </div>
-            <div class="col-md-6 order-md-2">
-              <div class="card-body">
-                <br />
-                <h6 class="card-title colorDeTextoMG">Visión de Gameverse</h6>
-                <hr />
-                <p class="colorDeTextoMG">
-                  "Nos visualizamos como líderes en la industria de los videojuegos, siendo reconocidos por nuestra creatividad, calidad y diversidad en los productos que ofrecemos. Buscamos expandir nuestra presencia global y convertirnos en una fuente de inspiración para los jugadores de todas las edades. Además, aspiramos a promover la inclusión, la sostenibilidad y la responsabilidad social en el mundo del gaming."
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-6 contenidoColumnaMG">
+          <h2 class="tituloMG">CONTACTO</h2>
+          <p class="parrafoMG">¡Estamos aquí para ayudarte! Completa el formulario y nos pondremos en contacto contigo pronto.</p>
+          <form action="">
+            
+            <input class="form-control inputMG my-3" id="input1" type="text" name="Nombre" placeholder="Nombre" required>
+            
+            <input class="form-control inputMG my-3" id="input2" type="email" name="Correo" placeholder="Correo" required>
+            
+            <input class="form-control inputMG my-3" id="input3" type="number" name="Teléfono" placeholder="Teléfono" required>
+            
+            <textarea class="form-control textareaMG my-3" id="text" name="Mensaje" placeholder="Escriba aqui su mensaje" required></textarea>
+
+            <input class="btn btn-dark botonMG my-3" type="button" value="ENVIAR" id="boton" onclick="send()">
+
+          </form>
         </div>
-        
       </div>
-<!-- cards del equipo -->
-      <section class="container contenedorCardsMG">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-4 offset-md-4 mb-4">
-                    <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
-                        <img src="../Assets/belen.jpeg" alt="Imagen 1" class="imgCardMG card-img-top img-fluid ">
-                        <div class="overlay">
-                          <div class="overlay-text">  
-                            <h2>Molina Belén</h2>
-                            <h4> 24 años </h4>
-                            <p class="text-white">Expectativa: Aspiro a desarrollar mis habilidades de diseño web y programación, aplicando los conceptos aprendidos para crear una página funcional y estéticamente atractiva. También ganar experiencia en trabajo en equipo y gestión de tiempos.</p>
-                          </div>
-                      </div>
-                        
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card cardPersonalMG"onclick="changeImageTemporary(this, '../Assets/cartaAzul.png')">
-                        <img src="../Assets/gabriel.jpeg" alt="Imagen 2" class="imgCardMG card-img-top img-fluid">
-                        <div class="overlay">
-                          <div class="overlay-text">
-                            <h2>Mendez Gabriel</h2>
-                            <h4> 28 años </h4>
-                            <p class="text-white">Expectativa: Poder desarrollar e incorporar nuevas y variadas habilidades en la lógica de programación y sumar experiencia en el trabajo en equipo</p>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
-                        <img src="../Assets/mauro.jpeg" alt="Imagen 3" class="imgCardMG card-img-top img-fluid">
-                        <div class="overlay">
-                          <div class="overlay-text">
-                            <h2>Gutierrez Mauro</h2>
-                            <h4> 34 años </h4>
-                            <p class="text-white">Expectativa: seguir desarrollando mis habilidades de programacion centradome en la practica y el trabajo en equipo.</p>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaAzul.png')">
-                        <img src="../Assets/franco.jpeg" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
-                          <div class="overlay">
-                          <div class="overlay-text">
-                            <h2>Franco Margagliotti</h2>
-                            <h4> 26 años </h4>
-                            <p class="text-white">Mis objetivos con el proyecto Game Verse son fijar conocimientos sobre JavaScript, profundizar aspectos de la programación y seguir aprendiendo acerca del trabajo en equipo.</p>
-                          </div>
-                      </div>                  
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
-                      <img src="../Assets/matias M.png" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
-                        <div class="overlay">
-                          <div class="overlay-text">
-                            <h2>Maldonado Matias</h2>
-                            <h4> 24 años </h4>
-                            <p class="text-white">Expectativa: Aspiro a desarrollar nuevas habilidades y a poner en práctica lo aprendido en el cursado. Además también aspiro a un mayor desarrollo a la hora de trabajar en grupo.</p>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaAzul.png')">
-                      <img src="../Assets/persona 6.png" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
-                        <div class="overlay">
-                          <div class="overlay-text">
-                            <h3>Valdez Nazareno</h3>
-                            <h5>25 años </h5>
-                            <p class="text-white">Expectativas: En este proyecto intentar mejorar la práctica sobre la lógica de JavaScript con lo aprendido en clases y poder ganar experiencia en un proyecto en equipo.</p>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                  <div class="card cardPersonalMG" onclick="changeImageTemporary(this, '../Assets/cartaRoja.png')">
-                      <img src="../Assets/persona 7.png" alt="Imagen 4" class="imgCardMG card-img-top img-fluid">
-                        <div class="overlay">
-                          <div class="overlay-text">
-                            <h3>Santiago Delgado</h3>
-                            <h5>-- años </h5>
-                            <p class="text-white">Expectativa:---.</p>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-            </div>
-        </div>
-      </section>  
     </main>
     <footer class=" text-white py-3">
       <!-- logo -->
@@ -397,7 +288,14 @@
       </div>
      
     </footer>
+    <script src="../app/contacto.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <script src="../app/appAbout.js"></script>
-</body>
+
+    <script src=".app/register.js"></script>
+    <script src="../app/filtro.js"></script>
+    <script src="../app/admin.js"></script>
+    <script src="../app/Login.js"></script>
+    <script src="../app/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>
